@@ -1,5 +1,24 @@
 # AI use log
 
+## 2026-10-20 — TV4 / luongnhatinh (Week 2)
+
+- Minh implemented Week 2 exercises (W2-1 to W2-5) and shared team function `render(blocks)` in `python-bootcamp`:
+  - W2-1 `models.py`: dataclass `Task` with range validation on `importance` (1–5) and `days_left(today)`.
+  - W2-2 `io_utils.py`: `load_tasks` and `save_json` handling UTF-8, CSV structure validation, and specific line-number error reporting.
+  - W2-3 `errors.py`: custom exception `InfeasiblePlan` and `check_feasible` verification.
+  - W2-4 `tests_for_baoduong2342007.py`: 5 cross-tests for Dương (summary even, top_k zero/negative, missing single shortage, by_day duplicate courses, binary_search 1-element found/not found).
+  - W2-5 `__main__.py` & `__init__.py`: runnable package via `python -m members.luongnhatinh.w2` loading samples via relative path.
+  - T-W2 `shared/study_planner/render.py` & `shared/render.py`: `render(blocks)` formatting `<title>: <hours:g> h` and `"No tasks."` for empty input, accompanied by 5 unit tests in `tests/shared_w2/test_render.py`.
+- AI assistance was used to verify edge cases, review Ruff rules and format annotations according to modern Python 3.11+ standards. All code and logic have been locally tested and verified.
+- Verification results:
+  - Official W2 tests: 3 passed (`python -m pytest -q tests/test_w2.py --member luongnhatinh`)
+  - Cross-tests: 5 passed (`python -m pytest -q members/luongnhatinh/w2/tests_for_baoduong2342007.py`)
+  - Package execution: clean run printing 2 tasks
+  - Shared render tests: 5 passed (`python -m pytest -q tests/shared_w2/test_render.py`)
+  - Ruff check: 0 errors (clean)
+  - Regression W1: 5 passed
+- Actual hours spent: ~2.5 hours.
+
 ## 2026-10-16 — Week1 follow-up
 
 - Dương wrote the original five exercises and asked Codex for Git help. He
