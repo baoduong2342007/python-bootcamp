@@ -1,7 +1,8 @@
 # Week 2 — Bảo (`simble2k`)
 
-Personal issue: [#37](https://github.com/baoduong2342007/python-bootcamp/issues/37) (target).
-Personal PR: [#38](https://github.com/baoduong2342007/python-bootcamp/pull/38) (target).
+Personal issue: [#43](https://github.com/baoduong2342007/python-bootcamp/issues/43).
+Personal PR: [#44](https://github.com/baoduong2342007/python-bootcamp/pull/44).
+Team function PR: [#45](https://github.com/baoduong2342007/python-bootcamp/pull/45).
 Shared function branch: `feat/w2-total-effort`.
 Assigned reviewer for personal PR: Quyền (`pqquyenn`).
 Reviewee for cross-tests and review: Huy (`tqhuy0602`).

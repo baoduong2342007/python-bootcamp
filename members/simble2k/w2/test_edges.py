@@ -25,6 +25,11 @@ def test_task_invalid_importance(invalid_importance):
         Task("Bad", invalid_importance, 1.0, date(2026, 12, 1))
 
 
+def test_task_nan_effort():
+    with pytest.raises(ValueError, match="effort_h must be non-negative"):
+        Task("NaN Effort", 3, float("nan"), date(2026, 12, 1))
+
+
 def test_task_negative_effort():
     with pytest.raises(ValueError, match="effort_h must be non-negative"):
         Task("Negative", 3, -1.5, date(2026, 12, 1))

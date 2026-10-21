@@ -1,5 +1,6 @@
 """Task model for personal Week 2 exercises."""
 
+import math
 from dataclasses import dataclass
 from datetime import date
 
@@ -14,7 +15,7 @@ class Task:
     def __post_init__(self) -> None:
         if not (1 <= self.importance <= 5):
             raise ValueError("importance must be between 1 and 5")
-        if self.effort_h < 0:
+        if math.isnan(self.effort_h) or not (self.effort_h >= 0):
             raise ValueError("effort_h must be non-negative")
         self.effort_h = float(self.effort_h)
 
