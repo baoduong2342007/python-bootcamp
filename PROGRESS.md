@@ -12,6 +12,12 @@ Replace Pending with actual results only. Record actual hours, not allocation es
 
 Once passing, Member 5 records `4 official + 1 extra`. Do not describe the additional test as an instructor test.
 
+## Week 2
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w2 | [#37](https://github.com/baoduong2342007/python-bootcamp/issues/37) | [#40](https://github.com/baoduong2342007/python-bootcamp/pull/40), draft; not merged | Bảo (`simble2k`), pending | Local Python 3.14: 3 official + 23 own edge + 7 Minh cross-tests passed; package runs; Ruff clean. Tests/samples temporarily overlaid from pending #29. W2 CI and peer approval pending. | Not reported by Huy; automated work is not counted as human study time |
+
 ## Week 1 closeout snapshot (2026-10-16)
 
 - Group follow-up PR [#27](https://github.com/baoduong2342007/python-bootcamp/pull/27) is merged into `main` at `8eaa7e2`.

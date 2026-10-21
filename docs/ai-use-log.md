@@ -1,5 +1,21 @@
 # AI use log
 
+## 2026-10-21 — TV2 / tqhuy0602, Week 2
+
+- Trần Quốc Huy is the owner of issue #37 and PR #40. Codex implemented the
+  retained W2 model, CSV/JSON utilities, exception, cross-tests, personal edge
+  tests and package entry point; assisted verification, progress documentation,
+  and Git/GitHub preparation. These new implementations are AI-assisted and
+  are not declared independently self-written by Huy.
+- Local Python 3.14 verification: 3 official W2 tests, 23 personal edge cases,
+  7 cross-test cases for Minh (6 functions), and 5 W1 regression tests passed;
+  Ruff passed. Package execution prints the two sample tasks; imports are quiet.
+- Official W2 files were temporarily overlaid unchanged from Minh's pending
+  import PR #29. They are excluded from Huy's commits. A clean checkout still
+  requires that import before the sample-based W2 commands can run.
+- Human review/approval, W2 CI coverage, merge, and Huy's actual human hours
+  remain pending. No past dates or study hours were manufactured.
+
 ## 2026-10-16 — Week1 follow-up
 
 - Dương wrote the original five exercises and asked Codex for Git help. He
