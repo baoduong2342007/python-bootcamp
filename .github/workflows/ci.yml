@@ -25,8 +25,8 @@ jobs:
       - name: Run Ruff check
         run: ruff check .
 
-  test-tokenization:
-    name: Test punctuation word boundaries
+  test-w1-tokenization:
+    name: Team Tokenization Regression
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -73,39 +73,78 @@ jobs:
             echo "Core tests or CI changed: testing all 5 members"
           fi
 
-          # TV1: baoduong2342007 (variant 1)
+          run_member_w2() {
+            MEMBER=$1
+            REVIEWEE=$2
+            echo "::group::Testing Week 2 for $MEMBER"
+            if [ -f "members/$MEMBER/w2/__main__.py" ]; then
+              if [ -f "tests/test_w2.py" ]; then
+                pytest -q tests/test_w2.py --member "$MEMBER"
+              else
+                echo "Official tests/test_w2.py not found in repo (pending PR #29 merge)."
+              fi
+              if [ -f "members/$MEMBER/w2/tests_for_${REVIEWEE}.py" ]; then
+                pytest -q "members/$MEMBER/w2/tests_for_${REVIEWEE}.py"
+              fi
+              if [ -f "members/$MEMBER/w2/test_edges.py" ]; then
+                pytest -q "members/$MEMBER/w2/test_edges.py"
+              fi
+              python -m "members.$MEMBER.w2"
+            else
+              echo "Member $MEMBER W2 Pending: w2/__main__.py not found."
+            fi
+            echo "::endgroup::"
+          }
+
+          # TV1: baoduong2342007 (variant 1, reviews Quyen)
           if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -q '^members/baoduong2342007/'; then
             echo "::group::Testing member baoduong2342007 (variant 1)"
             pytest -q tests/test_w1.py --member baoduong2342007 --variant 1
             echo "::endgroup::"
+            run_member_w2 "baoduong2342007" "pqquyenn"
           fi
 
-          # TV2: tqhuy0602 (variant 2)
+          # TV2: tqhuy0602 (variant 2, reviews Minh)
           if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -q '^members/tqhuy0602/'; then
             echo "::group::Testing member tqhuy0602 (variant 2)"
             pytest -q tests/test_w1.py --member tqhuy0602 --variant 2
             echo "::endgroup::"
+            run_member_w2 "tqhuy0602" "luongnhatinh"
           fi
 
-          # TV3: pqquyenn (variant 3)
+          # TV3: pqquyenn (variant 3, reviews Bao)
           if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -q '^members/pqquyenn/'; then
             echo "::group::Testing member pqquyenn (variant 3)"
             pytest -q tests/test_w1.py --member pqquyenn --variant 3
             echo "::endgroup::"
+            run_member_w2 "pqquyenn" "simble2k"
           fi
 
-          # TV4: luongnhatinh (variant 4)
+          # TV4: luongnhatinh (variant 4, reviews Duong)
           if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -q '^members/luongnhatinh/'; then
             echo "::group::Testing member luongnhatinh (variant 4)"
             pytest -q tests/test_w1.py --member luongnhatinh --variant 4
             echo "::endgroup::"
+            run_member_w2 "luongnhatinh" "baoduong2342007"
           fi
 
-          # TV5: simble2k (4 official + 1 extra)
+          # TV5: simble2k (4 official + 1 extra, reviews Huy)
           if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -q '^members/simble2k/'; then
             echo "::group::Testing member simble2k (4 official + 1 extra)"
             pytest -q tests/test_w1.py --member simble2k -k "not test_w1_4"
             pytest -q tests/test_w1_extra.py --member simble2k
+            echo "::endgroup::"
+            run_member_w2 "simble2k" "tqhuy0602"
+          fi
+
+          # Shared W2 tests
+          if [ "$RUN_ALL" = true ] || echo "$CHANGED_FILES" | grep -qE '^shared/|^tests/shared_w2/'; then
+            echo "::group::Testing Shared W2 modules"
+            if [ -d "tests/shared_w2" ] && ls tests/shared_w2/test_*.py 1>/dev/null 2>&1; then
+              pytest -q tests/shared_w2
+            else
+              echo "No shared_w2 tests to run yet."
+            fi
             echo "::endgroup::"
           fi
 
@@ -119,14 +158,19 @@ jobs:
         include:
           - member: baoduong2342007
             variant: 1
+            reviewee: pqquyenn
           - member: tqhuy0602
             variant: 2
+            reviewee: luongnhatinh
           - member: pqquyenn
             variant: 3
+            reviewee: simble2k
           - member: luongnhatinh
             variant: 4
+            reviewee: baoduong2342007
           - member: simble2k
             variant: 5
+            reviewee: tqhuy0602
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -139,11 +183,54 @@ jobs:
       - name: Install dependencies
         run: pip install pytest
 
-      - name: Run Pytest
+      - name: Run Week 1 Pytest
         run: |
           if [ "${{ matrix.member }}" = "simble2k" ]; then
             pytest -q tests/test_w1.py --member ${{ matrix.member }} -k "not test_w1_4"
             pytest -q tests/test_w1_extra.py --member ${{ matrix.member }}
           else
             pytest -q tests/test_w1.py --member ${{ matrix.member }} --variant ${{ matrix.variant }}
+          fi
+
+      - name: Run Week 2 Pytest and Package
+        run: |
+          MEMBER="${{ matrix.member }}"
+          REVIEWEE="${{ matrix.reviewee }}"
+          if [ -f "members/$MEMBER/w2/__main__.py" ]; then
+            if [ -f "tests/test_w2.py" ]; then
+              pytest -q tests/test_w2.py --member "$MEMBER"
+            fi
+            if [ -f "members/$MEMBER/w2/tests_for_${REVIEWEE}.py" ]; then
+              pytest -q "members/$MEMBER/w2/tests_for_${REVIEWEE}.py"
+            fi
+            if [ -f "members/$MEMBER/w2/test_edges.py" ]; then
+              pytest -q "members/$MEMBER/w2/test_edges.py"
+            fi
+            python -m "members.$MEMBER.w2"
+          else
+            echo "::notice::Member $MEMBER W2 Pending: w2/__main__.py not yet committed"
+          fi
+
+  test-shared-main:
+    name: Test Shared Study Planner (Main)
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pytest
+
+      - name: Run Shared W2 tests
+        run: |
+          if [ -d "tests/shared_w2" ] && ls tests/shared_w2/test_*.py 1>/dev/null 2>&1; then
+            pytest -q tests/shared_w2
+          else
+            echo "No shared_w2 tests to run yet."
           fi
