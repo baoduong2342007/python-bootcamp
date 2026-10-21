@@ -13,8 +13,12 @@
 - Official W2 files were temporarily overlaid unchanged from Minh's pending
   import PR #29. They are excluded from Huy's commits. A clean checkout still
   requires that import before the sample-based W2 commands can run.
-- Human review/approval, W2 CI coverage, merge, and Huy's actual human hours
-  remain pending. No past dates or study hours were manufactured.
+- Human approval, W2 CI coverage and merge remain pending. Huy reported
+  6 hours of actual W2 study/work in this chat on 2026-10-21; automated runtime
+  is excluded. No past dates or study hours were manufactured.
+- After Huy explicitly authorized posting, Codex submitted COMMENT reviews
+  with Question/Suggestion/Praise on Minh's #31/#32 and contract #35. These
+  submissions are not personal team-consensus approvals.
 
 ## 2026-10-16 — Week1 follow-up
 

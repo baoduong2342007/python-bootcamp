@@ -2,7 +2,8 @@
 
 Owner: `tqhuy0602`. Personal issue [#37](https://github.com/baoduong2342007/python-bootcamp/issues/37),
 draft PR [#40](https://github.com/baoduong2342007/python-bootcamp/pull/40).
-Assigned reviewer: Bảo (`simble2k`). Actual human hours: not yet reported.
+Assigned reviewer: Bảo (`simble2k`). Actual human study/work time: 6 hours,
+self-reported by Huy in this chat on 2026-10-21; excludes Codex's automated runtime.
 
 Run from the repo root in a Python 3.10+ environment with pytest and Ruff:
 
@@ -35,10 +36,15 @@ Huy's commits, and no assertion was changed:
 
 - Import PR #29 must merge before sample-based W2 commands work on a clean checkout.
 - Quyền's W2 CI expansion and Bảo's review/approval are pending.
-- Huy's review of Minh, shared-contract consensus, and the shared prioritise PR
-  are tracked separately; local tests do not establish personal consensus.
+- Huy explicitly authorized the Codex-assisted COMMENT reviews of Minh's
+  [#31](https://github.com/baoduong2342007/python-bootcamp/pull/31#pullrequestreview-5601689870)
+  and [#32](https://github.com/baoduong2342007/python-bootcamp/pull/32#pullrequestreview-5601690501),
+  and contract [#35](https://github.com/baoduong2342007/python-bootcamp/pull/35#pullrequestreview-5601691271).
+  These were posted; personal contract-consensus approval remains pending.
+- Shared prioritise is in draft [#41](https://github.com/baoduong2342007/python-bootcamp/pull/41),
+  stacked on #35. Local tests do not establish personal team consensus.
 - No `py-w2-done` tag or overall team completion is claimed.
 
 AI use: Codex implemented the retained W2 code/tests and assisted checks,
 documentation and Git operations. Huy is the assigned owner; human review and
-actual human study time are not inferred from this automation.
+study-time reports are recorded separately from this automation.
