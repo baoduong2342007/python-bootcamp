@@ -12,25 +12,33 @@ metadata, not a claim that all submissions or Lab 2 are complete.
 | Shared contract | PR #35 awaiting required team approvals | Function PRs must wait before merge |
 | W2 CI | Existing main workflow covers W1/Ruff | W2 expansion remains Quyền's task; W1 success is not W2 evidence |
 | Deadline | No verified LMS date supplied; milestone due date is unset | Keep unset; Dương verifies the official date |
-| Assistant board | `gh project list --owner baoduong2342007` reports missing `read:project` scope | Board existence/configuration not verified through this token; no duplicate project created |
+| Assistant board | [Lab 2 board](https://github.com/users/tqhuy0602/projects/2), owned by Huy, private | Created after project access was authorized and authenticated; 13 issue cards and Kanban view configured |
 
 The labels and milestone were already present before this work. Only Huy's
 missing issues were created. The README now documents W2 official tests
 without `--variant`, explicit cross-test filenames, package execution, Ruff,
 and dependency/approval gates.
 
-## Board work still requiring project access
+## Board verification after authentication
 
-Locate the existing Assistant board before creating one. Required states:
-Todo → In progress → In review → Done; fields: Component and Size. Add the ten
-Lab 2 issues #6–#15 and the remaining follow-up issues. Closed legacy issues
-must retain any missing pre-merge approval evidence as a separate follow-up;
-closing an issue alone does not establish every DoD condition.
+Initially the CLI lacked `read:project`, and the in-app browser was signed out.
+Huy explicitly authorized adding the `project` scope and completed GitHub's
+device authentication. The repo had no linked project; Dương's visible project
+was unrelated and not writable by Huy. A new Lab 2 board was created under Huy.
 
-Project access must first be available through a suitably scoped token or an
-authenticated browser with the owner's project permissions. This audit does
-not claim that the board was inspected, created or updated.
+The board has Todo → In progress → In review → Done, Component and Size fields,
+and a Gate note for historical approval gaps and current dependencies. It
+contains all ten Lab 2 issues #6–#15 plus follow-ups #24, #26 and #28. Work in
+progress is limited by the stated policy to two cards per person. Closed legacy
+issues with remaining review/consensus gates are tracked In review instead of
+being treated as fully complete; the original GitHub issue state is unchanged.
+
+After Huy explicitly authorized the four invitations, `baoduong2342007`,
+`pqquyenn`, `luongnhatinh` and `simble2k` were granted WRITER access. The board
+stays private. GitHub rejects a direct repository link because project and
+repository owners differ, so use the board URL above; no repository link is claimed.
 
 AI use: Codex inspected metadata, drafted the README/audit and prepared Git
 and PR updates for owner Trần Quốc Huy. No personal study hours, teammate
-consensus, board completion or LMS deadline were inferred.
+consensus or LMS deadline were inferred. Board setup and the authorized
+collaborator roles were checked against the GitHub API.
