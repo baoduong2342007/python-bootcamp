@@ -1,5 +1,16 @@
 # AI use log
 
+## 2026-10-21 — Week 2 / TV3 (pqquyenn)
+
+- Phan Quỳnh Quyền hoàn thành 5 module bài tập cá nhân Week 2 (`models.py`, `io_utils.py`, `errors.py`, `tests_for_simble2k.py`, `__main__.py`) và hàm nhóm `allocate(tasks, hours)`.
+- AI (Google Antigravity) hỗ trợ:
+  - Thiết kế cấu trúc các module W2 theo yêu cầu bài tập và quy ước nhóm trong `plan (3).md`.
+  - Xây dựng bộ test biên `test_edges.py` cho các trường hợp ngoại lệ (importance bounds, line numbering trong CSV error, UTF-8 JSON roundtrip, InfeasiblePlan exception).
+  - Soạn thảo 5 test functions kiểm thử chéo W2-4 cho bài tập Week 1 của Bảo (`simble2k`) trong `tests_for_simble2k.py`.
+  - Soạn thảo nhận xét review cho Bảo (`review-simble2k-week1.md`) gồm Question, Suggestion, Praise.
+  - Cập nhật workflow CI GitHub Actions cho Week 2 và tài liệu theo dõi tiến độ.
+- Toàn bộ code và test đã được chạy kiểm thử cục bộ: 3 official tests passed, 12 edge tests passed, 5 cross-tests passed, package module chạy in 2 tasks, Ruff clean.
+
 ## 2026-10-16 — Week1 follow-up
 
 - Dương wrote the original five exercises and asked Codex for Git help. He
