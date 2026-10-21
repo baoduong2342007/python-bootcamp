@@ -1,5 +1,11 @@
 # AI use log
 
+## 2026-10-21 — TV5 / simble2k (Week 2)
+
+- Bảo (`simble2k`) implemented Week 2 exercises (W2-1 to W2-5) in `members/simble2k/w2/` and the shared T-W2 function `total_effort` in `shared/`.
+- AI assistant (Antigravity) was used for planning the implementation per `plan (3).md`, structuring edge test cases (`test_edges.py`), drafting cross-tests for Huy (`tests_for_tqhuy0602.py`), writing review notes (`review-huy-week1.md`), and formatting Git follow-up documentation.
+- AI-generated code and test suites in this session were reviewed, tested, and validated locally. Actual time spent: approximately 2.5 hours.
+
 ## 2026-10-16 — Week1 follow-up
 
 - Dương wrote the original five exercises and asked Codex for Git help. He
