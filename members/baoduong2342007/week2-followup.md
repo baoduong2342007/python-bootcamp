@@ -1,6 +1,9 @@
 # Week 2 — Dương (`baoduong2342007`)
 
 Personal issue: [#33](https://github.com/baoduong2342007/python-bootcamp/issues/33).
+Personal PR: [#34](https://github.com/baoduong2342007/python-bootcamp/pull/34) (draft pending #29 fixtures).
+Team contract: [#35](https://github.com/baoduong2342007/python-bootcamp/pull/35).
+Shared parser: [#36](https://github.com/baoduong2342007/python-bootcamp/pull/36), stacked on the contract.
 Branch: `py/w2-baoduong2342007`. Assigned reviewer: Minh (`luongnhatinh`).
 
 ## Implemented and checked locally — 2026-10-21

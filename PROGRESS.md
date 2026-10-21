@@ -26,5 +26,5 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | --- | --- | --- | --- | --- | --- | --- |
-| Duong (baoduong2342007) | w2 | #33 | Branch py/w2-baoduong2342007; review/merge pending | Minh (luongnhatinh) | Local: 3 official + 23 boundary + 6 cross-tests passed; package OK using pending #29 fixtures; W1 5 passed; Ruff clean | Pending actual self-report |
+| Duong (baoduong2342007) | w2 | [#33](https://github.com/baoduong2342007/python-bootcamp/issues/33) | [#34](https://github.com/baoduong2342007/python-bootcamp/pull/34) draft; review/merge pending | Minh (luongnhatinh) | Local: 3 official + 23 boundary + 6 cross-tests passed; package OK using pending #29 fixtures; W1 5 passed; Ruff clean | Pending actual self-report |
 
