@@ -22,12 +22,14 @@ def load_tasks(path: str | Path) -> list[Task]:
             try:
                 if None in row:
                     raise ValueError("too many CSV fields")
-                tasks.append(Task(
-                    title=row["title"],
-                    importance=int(row["importance"]),
-                    effort_h=float(row["effort_h"]),
-                    deadline=date.fromisoformat(row["deadline"]),
-                ))
+                tasks.append(
+                    Task(
+                        title=row["title"],
+                        importance=int(row["importance"]),
+                        effort_h=float(row["effort_h"]),
+                        deadline=date.fromisoformat(row["deadline"]),
+                    )
+                )
             except (TypeError, ValueError) as error:
                 raise ValueError(f"line {reader.line_num}: {error}") from error
     return tasks

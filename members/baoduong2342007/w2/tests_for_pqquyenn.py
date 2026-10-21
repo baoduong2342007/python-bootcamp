@@ -5,7 +5,10 @@ from members.pqquyenn.w1 import grades, rules, text_tools, timetable, translate
 
 def test_summary_even_number_of_scores():
     assert grades.summary([9, 2, 4, 5]) == {
-        "min": 2, "max": 9, "mean": 5.0, "median": 4.5,
+        "min": 2,
+        "max": 9,
+        "mean": 5.0,
+        "median": 4.5,
     }
 
 
