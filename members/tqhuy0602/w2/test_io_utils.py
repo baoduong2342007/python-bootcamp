@@ -69,6 +69,15 @@ def test_missing_file_is_not_wrapped(tmp_path):
         load_tasks(tmp_path / "missing.csv")
 
 
+def test_malformed_csv_reports_physical_line(tmp_path):
+    source = tmp_path / "tasks.csv"
+    source.write_text(
+        HEADER + 'ok,3,1,2026-10-30\nbad,3,1,"2026-10-30\n', encoding="utf-8"
+    )
+    with pytest.raises(ValueError, match="line 3"):
+        load_tasks(source)
+
+
 def test_save_empty_list(tmp_path):
     output = tmp_path / "empty.json"
     save_json([], output)

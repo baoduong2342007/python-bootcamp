@@ -38,7 +38,7 @@ def load_tasks(path: str | Path) -> list[Task]:
                     raise ValueError(f"line {reader.line_num}: {exc}") from exc
                 tasks.append(task)
         except csv.Error as exc:
-            raise ValueError(f"line {reader.line_num}: {exc}") from exc
+            raise ValueError(f"line {reader.reader.line_num}: {exc}") from exc
     return tasks
 
 

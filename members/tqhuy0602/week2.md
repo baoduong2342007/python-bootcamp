@@ -14,7 +14,7 @@ python -m members.tqhuy0602.w2
 python -m ruff check members/tqhuy0602/w2
 ```
 
-Local verification on Python 3.14: respectively 3 official tests, 23 personal
+Local verification on Python 3.14: respectively 3 official tests, 24 personal
 edge cases, and 7 Minh cross-test cases passed. The cross-test file has six
 functions and must be passed explicitly to pytest. The package prints DS exam
 and Assignment; importing it does not execute the program. Ruff and Huy's five
