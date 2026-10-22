@@ -32,5 +32,6 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | --- | --- | --- | --- | --- | --- | --- |
+| Member 5 - Bao (simble2k) | w2 | [#43](https://github.com/baoduong2342007/python-bootcamp/issues/43) | [#44](https://github.com/baoduong2342007/python-bootcamp/pull/44) (personal), [#45](https://github.com/baoduong2342007/python-bootcamp/pull/45) (total_effort) | Member 3 - Quyen (`pqquyenn`) | 3 official passed (`--member simble2k`); 13 edge tests passed; 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
 | Duong (baoduong2342007) | w2 | [#33](https://github.com/baoduong2342007/python-bootcamp/issues/33) | [#34](https://github.com/baoduong2342007/python-bootcamp/pull/34) draft; review/merge pending | Minh (luongnhatinh) | Local: 3 official + 23 boundary + 6 cross-tests passed; package OK using pending #29 fixtures; W1 5 passed; Ruff clean | Pending actual self-report |
 
