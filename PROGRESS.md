@@ -13,6 +13,12 @@ Replace Pending with actual results only. Record actual hours, not allocation es
 
 Once passing, Member 5 records `4 official + 1 extra`. Do not describe the additional test as an instructor test.
 
+## Week 2
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w2 | [#37](https://github.com/baoduong2342007/python-bootcamp/issues/37) | [#40](https://github.com/baoduong2342007/python-bootcamp/pull/40), draft; not merged | Bảo (`simble2k`), pending | Local Python 3.14: 3 official + 24 own edge + 7 Minh cross-tests passed; package runs; Ruff clean. Tests/samples temporarily overlaid from pending #29. W2 CI and peer approval pending. | 6h (Huy self-reported in this session on 2026-10-21; excludes automated runtime) |
+
 ## Week 1 closeout snapshot (2026-10-16)
 
 - Group follow-up PR [#27](https://github.com/baoduong2342007/python-bootcamp/pull/27) is merged into `main` at `8eaa7e2`.
@@ -22,3 +28,11 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 - The GitHub branch `py-w1-done` includes the submission record and Minh's W1-2 correction. Its tests pass locally; no pull request has been opened, so this branch has not run through GitHub Actions or merged to `main`.
 - The existing main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff and all five member jobs at `8eaa7e2`. Review approvals were waived by Dương, and the GitHub issue audit did not find a personal Week 1 issue for Quyền; this record does not claim those as completed.
 - The Week 1 completion tag has not been pushed. No separate Moodle upload is specified for the between-session Week 1 homework.
+
+## Week 2 personal progress
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Member 5 - Bao (simble2k) | w2 | [#43](https://github.com/baoduong2342007/python-bootcamp/issues/43) | [#44](https://github.com/baoduong2342007/python-bootcamp/pull/44) (personal), [#45](https://github.com/baoduong2342007/python-bootcamp/pull/45) (total_effort) | Member 3 - Quyen (`pqquyenn`) | 3 official passed (`--member simble2k`); 13 edge tests passed; 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
+| Duong (baoduong2342007) | w2 | [#33](https://github.com/baoduong2342007/python-bootcamp/issues/33) | [#34](https://github.com/baoduong2342007/python-bootcamp/pull/34) draft; review/merge pending | Minh (luongnhatinh) | Local: 3 official + 23 boundary + 6 cross-tests passed; package OK using pending #29 fixtures; W1 5 passed; Ruff clean | Pending actual self-report |
+

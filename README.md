@@ -124,6 +124,73 @@ python -m ruff format --check members/simble2k/w1 tests/test_w1_extra.py
 
 Expected result: 4 official passed, 1 deselected; 1 extra test passed (`4 official + 1 extra`).
 
+## Week 2: Run and Verify
+
+Run commands from the repository root. Use the Python 3.12 environment from
+[the environment guide](docs/ci-environment.md), with pytest and Ruff installed.
+
+**Prerequisites:** the official W2 tests and sample files are being imported in
+[#29](https://github.com/baoduong2342007/python-bootcamp/pull/29). The commands
+below require that import plus your personal W2 package to be available in the
+checkout. Missing files or skipped tests mean **W2 Pending**, not a passing submission.
+
+For Huy, use:
+
+```bash
+# Three instructor tests for W2-1 to W2-3; W2 does not use --variant
+python -m pytest -q tests/test_w2.py --member tqhuy0602
+
+# Additional personal boundary tests
+python -m pytest -q members/tqhuy0602/w2
+
+# W2-4 cross-tests must be named explicitly: tests_for_*.py is not auto-discovered
+python -m pytest -q members/tqhuy0602/w2/tests_for_luongnhatinh.py
+
+# W2-5: read samples/tasks.csv using the package's __file__-relative path
+python -m members.tqhuy0602.w2
+python -m ruff check members/tqhuy0602/w2
+```
+
+For another member, replace the username and use that member's assigned
+cross-test target:
+
+| Author | Cross-test file in their `w2/` folder | Reviewer |
+| --- | --- | --- |
+| `baoduong2342007` | `tests_for_pqquyenn.py` | `luongnhatinh` |
+| `tqhuy0602` | `tests_for_luongnhatinh.py` | `simble2k` |
+| `pqquyenn` | `tests_for_simble2k.py` | `baoduong2342007` |
+| `luongnhatinh` | `tests_for_baoduong2342007.py` | `tqhuy0602` |
+| `simble2k` | `tests_for_tqhuy0602.py` | `pqquyenn` |
+
+Each submission needs three official tests passing without skips, at least
+five cross-test functions, successful package execution and clean Ruff checks.
+Keep instructor assertions unchanged. Additional edge tests supplement the
+official tests. A green W1 job alone does not establish W2 coverage; Quyền owns
+the W2 CI expansion, and its status must be checked separately.
+
+### Shared Week 2 planner
+
+The proposed shared types and interfaces are in contract PR
+[#35](https://github.com/baoduong2342007/python-bootcamp/pull/35).
+All five functions use `shared.contract.Task` and `Block`, preserve input data,
+and carry their own tests under `tests/shared_w2/`. Function PRs wait for the
+contract to receive the required four teammate approvals and merge. Do not
+substitute a personal Task class or claim agreement from a written proposal.
+
+After the relevant functions/tests are available:
+
+```bash
+python -m pytest -q tests/shared_w2/
+python -m ruff check shared/ tests/shared_w2/
+```
+
+Record actual commands/results, PR links and your real human study hours in
+[PROGRESS.md](PROGRESS.md). Keep missing inputs, approvals or unimplemented
+functions Pending. Dương creates `py-w2-done` only after all five submissions,
+the approved contract, shared functions, integration and CI pass the team gates.
+The verified metadata and open access/deadline items are recorded in
+[Huy's W2 workflow audit](docs/w2-workflow-audit.md).
+
 ## Course Materials & Tests Source
 
 The exercises follow Chapter 18 of **Git & GitHub for Team Projects**. Instructor materials and reference tests are available in [CSC10014 public materials](https://github.com/CSC10014-at-fit-hcmus/public_materials).
