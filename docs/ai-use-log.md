@@ -14,6 +14,9 @@
 - PR #41 was merged into the contract branch during this session. Dương
   explicitly chose to retain that update; Codex preserved prioritise and
   verified the resulting 17 shared tests without inferring contract approval.
+- Parser follow-up #48 was subsequently merged into the contract branch
+  during this work. Codex preserved that update too and verified the resulting
+  31 shared tests; neither early function merge establishes contract consensus.
 
 ## 2026-10-21 — TV2 / tqhuy0602, Week 2
 
