@@ -31,14 +31,21 @@ update that branch after the shared contract merges.
 
 ## Scope and merge order
 
-PR #35 contains the shared types, their tests, this contract, and the CI step
-that runs `tests/shared_w2/`. Planner implementations are reviewed separately.
+PR #35 proposes the shared types, their tests, this contract, and the CI step
+that runs `tests/shared_w2/`. Planner implementations have separate reviews.
 The earlier `total_effort` implementation and integration scaffold belong in
 [PR #45](https://github.com/baoduong2342007/python-bootcamp/pull/45).
 [Parser PR #36](https://github.com/baoduong2342007/python-bootcamp/pull/36)
 was already merged into the contract branch before contract approval; its
 implementation is removed from this proposal and restored in a separate
-follow-up PR. The original implementation commits remain in Git history.
+follow-up [PR #48](https://github.com/baoduong2342007/python-bootcamp/pull/48).
+The original implementation commits remain in Git history.
+
+During this follow-up, [Huy's PR #41](https://github.com/baoduong2342007/python-bootcamp/pull/41)
+was merged into the contract branch at `03df6f2`. At Dương's request, its
+`prioritise` implementation and eight tests remain included in PR #35. This
+does not establish the remaining teammates' contract approval or completion
+of the five-function integration.
 
 After all four teammate approvals and passing CI, squash merge the contract
 into `main`, following the team's normal PR workflow. Keep the contract branch

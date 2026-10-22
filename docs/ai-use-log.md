@@ -11,6 +11,29 @@
 - The new NaN cases failed before the validation fix. Contract tests and CI
   results are recorded in PR #35; a skipped integration scaffold is not
   recorded as a completed team integration test.
+- PR #41 was merged into the contract branch during this session. Dương
+  explicitly chose to retain that update; Codex preserved prioritise and
+  verified the resulting 17 shared tests without inferring contract approval.
+
+## 2026-10-21 — TV2 / tqhuy0602, Week 2
+
+- Trần Quốc Huy is the owner of issue #37 and PR #40. Codex implemented the
+  retained W2 model, CSV/JSON utilities, exception, cross-tests, personal edge
+  tests and package entry point; assisted verification, progress documentation,
+  and Git/GitHub preparation. These new implementations are AI-assisted and
+  are not declared independently self-written by Huy.
+- Local Python 3.14 verification: 3 official W2 tests, 24 personal edge cases,
+  7 cross-test cases for Minh (6 functions), and 5 W1 regression tests passed;
+  Ruff passed. Package execution prints the two sample tasks; imports are quiet.
+- Official W2 files were temporarily overlaid unchanged from Minh's pending
+  import PR #29. They are excluded from Huy's commits. A clean checkout still
+  requires that import before the sample-based W2 commands can run.
+- Human approval, W2 CI coverage and merge remain pending. Huy reported
+  6 hours of actual W2 study/work in this chat on 2026-10-21; automated runtime
+  is excluded. No past dates or study hours were manufactured.
+- After Huy explicitly authorized posting, Codex submitted COMMENT reviews
+  with Question/Suggestion/Praise on Minh's #31/#32 and contract #35. These
+  submissions are not personal team-consensus approvals.
 
 ## 2026-10-16 — Week1 follow-up
 
