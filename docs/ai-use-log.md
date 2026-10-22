@@ -1,5 +1,23 @@
 # AI use log
 
+## 2026-10-22 — Shared contract PR #35 follow-up
+
+- Codex inspected GitHub reviews and CI, separated planner implementations
+  from the contract proposal while retaining their original commits, and
+  prepared separate function PR updates. No teammate approval is inferred.
+- Retained AI-assisted changes clarify zero-hour Block construction versus
+  allocate's positive-output rule, reject NaN effort/hours, add regression
+  tests, and run shared tests in CI, including PRs stacked on the contract.
+- The new NaN cases failed before the validation fix. Contract tests and CI
+  results are recorded in PR #35; a skipped integration scaffold is not
+  recorded as a completed team integration test.
+- PR #41 was merged into the contract branch during this session. Dương
+  explicitly chose to retain that update; Codex preserved prioritise and
+  verified the resulting 17 shared tests without inferring contract approval.
+- Parser follow-up #48 was subsequently merged into the contract branch
+  during this work. Codex preserved that update too and verified the resulting
+  31 shared tests; neither early function merge establishes contract consensus.
+
 ## 2026-10-21 — Week 2 / TV3 (pqquyenn)
 
 - Phan Quỳnh Quyền hoàn thành 5 module bài tập cá nhân Week 2 (`models.py`, `io_utils.py`, `errors.py`, `tests_for_simble2k.py`, `__main__.py`) và hàm nhóm `allocate(tasks, hours)`.
@@ -8,8 +26,34 @@
   - Xây dựng bộ test biên `test_edges.py` cho các trường hợp ngoại lệ (importance bounds, line numbering trong CSV error, UTF-8 JSON roundtrip, InfeasiblePlan exception).
   - Soạn thảo 5 test functions kiểm thử chéo W2-4 cho bài tập Week 1 của Bảo (`simble2k`) trong `tests_for_simble2k.py`.
   - Soạn thảo nhận xét review cho Bảo (`review-simble2k-week1.md`) gồm Question, Suggestion, Praise.
-  - Cập nhật workflow CI GitHub Actions cho Week 2 và tài liệu theo dõi tiến độ.
+  - Cập nhật tài liệu theo dõi tiến độ và kiểm thử cục bộ.
 - Toàn bộ code và test đã được chạy kiểm thử cục bộ: 3 official tests passed, 12 edge tests passed, 5 cross-tests passed, package module chạy in 2 tasks, Ruff clean.
+
+## 2026-10-21 — TV2 / tqhuy0602, Week 2
+
+- Trần Quốc Huy is the owner of issue #37 and PR #40. Codex implemented the
+  retained W2 model, CSV/JSON utilities, exception, cross-tests, personal edge
+  tests and package entry point; assisted verification, progress documentation,
+  and Git/GitHub preparation. These new implementations are AI-assisted and
+  are not declared independently self-written by Huy.
+- Local Python 3.14 verification: 3 official W2 tests, 24 personal edge cases,
+  7 cross-test cases for Minh (6 functions), and 5 W1 regression tests passed;
+  Ruff passed. Package execution prints the two sample tasks; imports are quiet.
+- Official W2 files were temporarily overlaid unchanged from Minh's pending
+  import PR #29. They are excluded from Huy's commits. A clean checkout still
+  requires that import before the sample-based W2 commands can run.
+- Human approval, W2 CI coverage and merge remain pending. Huy reported
+  6 hours of actual W2 study/work in this chat on 2026-10-21; automated runtime
+  is excluded. No past dates or study hours were manufactured.
+- After Huy explicitly authorized posting, Codex submitted COMMENT reviews
+  with Question/Suggestion/Praise on Minh's #31/#32 and contract #35. These
+  submissions are not personal team-consensus approvals.
+
+## 2026-10-21 — Duong / Week 2
+
+- Codex supports implementation of the personal W2 modules, generation of boundary and cross-tests, verification, documentation, and Git/GitHub operations. AI-generated code and tests from this session are retained; no claim of prior independent authorship is made.
+- Local Python 3.12: 3 official W2, 23 boundary cases, 6 cross-tests and 5 W1 tests passed; package printed both sample tasks. Ruff 0.17.1 passed. Official W2 fixtures came from Minh's pending PR #29 in a disposable verification snapshot.
+- Peer review, CI, merge and self-reported hours remain pending. See members/baoduong2342007/week2-followup.md for commands and provenance.
 
 ## 2026-10-16 — Week1 follow-up
 
@@ -36,7 +80,7 @@
 - Kết quả kiểm thử trên main `f6512d0`:
   - Quyền (TV3): 5 official tests passed, 0 skipped (`--member pqquyenn --variant 3`); Ruff clean.
   - Ma trận toàn nhóm: TV1 5 passed, TV2 5 passed, TV4 5 passed, TV5 4 passed (1 deselected) + 1 extra passed. Toàn bộ repository Ruff clean (`All checks passed!`).
-- Đã soạn thảo nhận xét review bổ sung (Question, Suggestion, Praise) cho các PR #10, #11 và #25 của Huy.
+  - Đã soạn thảo nhận xét review bổ sung (Question, Suggestion, Praise) cho các PR #10, #11 và #25 của Huy.
 
 ## 2026-10-15 — TV2 / tqhuy0602
 
