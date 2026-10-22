@@ -37,11 +37,10 @@ def test_full_pipeline_when_all_functions_merged() -> None:
     Skips gracefully if the other 4 team functions have not yet been merged into this branch.
     """
     try:
+        from shared.allocate import allocate
         from shared.parse_csv import parse_csv
         from shared.prioritise import prioritise
         from shared.render import render
-
-        from shared.allocate import allocate
     except ImportError as e:
         pytest.skip(f"Integration pipeline awaiting team functions: {e}")
 
