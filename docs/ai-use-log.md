@@ -1,5 +1,17 @@
 # AI use log
 
+## 2026-10-22 — Shared contract PR #35 follow-up
+
+- Codex inspected GitHub reviews and CI, separated planner implementations
+  from the contract proposal while retaining their original commits, and
+  prepared separate function PR updates. No teammate approval is inferred.
+- Retained AI-assisted changes clarify zero-hour Block construction versus
+  allocate's positive-output rule, reject NaN effort/hours, add regression
+  tests, and run shared tests in CI, including PRs stacked on the contract.
+- The new NaN cases failed before the validation fix. Contract tests and CI
+  results are recorded in PR #35; a skipped integration scaffold is not
+  recorded as a completed team integration test.
+
 ## 2026-10-16 — Week1 follow-up
 
 - Dương wrote the original five exercises and asked Codex for Git help. He

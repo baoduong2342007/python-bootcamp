@@ -7,6 +7,12 @@ approvals; no unanimous agreement is asserted yet.
 `Task(title: str, importance: int, effort_h: float, deadline: date)` requires
 importance in 1–5 and nonnegative effort. `Block(task: Task, hours: float)`
 requires nonnegative hours. Invalid ranges raise `ValueError`.
+NaN is outside the nonnegative range and raises the same error.
+
+`Block(task, 0)` is intentionally valid for direct construction and rendering.
+The constructor does not allocate time or enforce an allocation budget.
+`allocate` has a stronger postcondition: every returned block has `hours > 0`,
+so zero-effort tasks and nonpositive allocations produce no blocks.
 
 | Owner | Interface | Behavior |
 | --- | --- | --- |
@@ -23,6 +29,31 @@ keep `FileNotFoundError`. Every function PR includes its own tests under
 and merged. Minh's existing render branch has a compatible temporary copy;
 update that branch after the shared contract merges.
 
+## Scope and merge order
+
+PR #35 contains the shared types, their tests, this contract, and the CI step
+that runs `tests/shared_w2/`. Planner implementations are reviewed separately.
+The earlier `total_effort` implementation and integration scaffold belong in
+[PR #45](https://github.com/baoduong2342007/python-bootcamp/pull/45).
+[Parser PR #36](https://github.com/baoduong2342007/python-bootcamp/pull/36)
+was already merged into the contract branch before contract approval; its
+implementation is removed from this proposal and restored in a separate
+follow-up PR. The original implementation commits remain in Git history.
+
+After all four teammate approvals and passing CI, squash merge the contract
+into `main`, following the team's normal PR workflow. Keep the contract branch
+until stacked function PRs have been updated. Each function owner then updates
+their branch from `main`, uses the canonical contract, retargets the PR to
+`main`, checks that its diff contains only the intended function changes, and
+obtains the assigned review and passing CI before merging.
+
+The shared CI job also runs for PRs targeting `feat/w2-shared-contract` so
+stacked function PRs can be tested while waiting. Passing contract unit tests
+does not establish that the five-function integration is complete. Bảo adds
+the integration test after the functions merge; a missing module or sample
+must fail that final test rather than skip it. A skipped scaffold is not
+evidence that the team integration gate passed.
+
 For sample tasks, today `2026-10-26`, and a 2-hour budget: total effort is
 7.5, order is Assignment then DS exam, blocks are 1.5 and 0.5 hours. Render:
 
@@ -33,5 +64,7 @@ DS exam: 0.5 h
 
 AI assistance: Codex supports writing this contract proposal and its tests,
 checking compatibility with Minh's temporary contract, and Git/PR preparation.
+The 2026-10-22 follow-up addresses review feedback, separates function work,
+rejects NaN effort/hours, and adds shared CI coverage and regression tests.
 AI-generated code and documentation are retained. Approval must come from
 the actual teammates, not from this document.
