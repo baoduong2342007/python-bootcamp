@@ -1,5 +1,23 @@
 # AI use log
 
+## 2026-10-22 — Shared contract PR #35 follow-up
+
+- Codex inspected GitHub reviews and CI, separated planner implementations
+  from the contract proposal while retaining their original commits, and
+  prepared separate function PR updates. No teammate approval is inferred.
+- Retained AI-assisted changes clarify zero-hour Block construction versus
+  allocate's positive-output rule, reject NaN effort/hours, add regression
+  tests, and run shared tests in CI, including PRs stacked on the contract.
+- The new NaN cases failed before the validation fix. Contract tests and CI
+  results are recorded in PR #35; a skipped integration scaffold is not
+  recorded as a completed team integration test.
+- PR #41 was merged into the contract branch during this session. Dương
+  explicitly chose to retain that update; Codex preserved prioritise and
+  verified the resulting 17 shared tests without inferring contract approval.
+- Parser follow-up #48 was subsequently merged into the contract branch
+  during this work. Codex preserved that update too and verified the resulting
+  31 shared tests; neither early function merge establishes contract consensus.
+
 ## 2026-10-21 — TV2 / tqhuy0602, Week 2
 
 - Trần Quốc Huy is the owner of issue #37 and PR #40. Codex implemented the
