@@ -70,3 +70,10 @@
   - AI assistance was used to check and resolve Ruff warnings: refactored dictionary value iteration in `members/luongnhatinh/w1/timetable.py` to eliminate `PLC0206`, formatted the import block in `members/luongnhatinh/w1/translate.py` to resolve `I001`, and fixed escaped Markdown characters in the PR #13 body.
   - Follow-up verification for TV4: 5 official tests passed with 0 skips (`--member luongnhatinh --variant 4`), Ruff clean (`All checks passed!`). TV4 personal follow-up PR #20 opened and requested Bao (@simble2k) to review.
   - AI assisted with drafting team documentation for function interfaces (TV1–TV4), logging the official test source revision `2c6edc79772984f6a6ca0c3664ad0a49c907e80a` and upstream audit, recording review notes for Quyên's PR #14, and preparing the team documentation PR.
+
+## 2026-10-21 — Duong / Week 2
+
+- Codex supports implementation of the personal W2 modules, generation of boundary and cross-tests, verification, documentation, and Git/GitHub operations. AI-generated code and tests from this session are retained; no claim of prior independent authorship is made.
+- Local Python 3.12: 3 official W2, 23 boundary cases, 6 cross-tests and 5 W1 tests passed; package printed both sample tasks. Ruff 0.17.1 passed. Official W2 fixtures came from Minh's pending PR #29 in a disposable verification snapshot.
+- Peer review, CI, merge and self-reported hours remain pending. See members/baoduong2342007/week2-followup.md for commands and provenance.
+

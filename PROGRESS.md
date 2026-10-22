@@ -21,3 +21,10 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 - The GitHub branch `py-w1-done` includes the submission record and Minh's W1-2 correction. Its tests pass locally; no pull request has been opened, so this branch has not run through GitHub Actions or merged to `main`.
 - The existing main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff and all five member jobs at `8eaa7e2`. Review approvals were waived by Dương, and the GitHub issue audit did not find a personal Week 1 issue for Quyền; this record does not claim those as completed.
 - The Week 1 completion tag has not been pushed. No separate Moodle upload is specified for the between-session Week 1 homework.
+
+## Week 2 personal progress
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Duong (baoduong2342007) | w2 | [#33](https://github.com/baoduong2342007/python-bootcamp/issues/33) | [#34](https://github.com/baoduong2342007/python-bootcamp/pull/34) draft; review/merge pending | Minh (luongnhatinh) | Local: 3 official + 23 boundary + 6 cross-tests passed; package OK using pending #29 fixtures; W1 5 passed; Ruff clean | Pending actual self-report |
+
