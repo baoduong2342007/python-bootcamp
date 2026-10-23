@@ -16,12 +16,11 @@ python -m pytest -q tests/shared_w2/test_prioritise.py
 python -m ruff check shared/prioritise.py shared/study_planner/prioritise.py tests/shared_w2/test_prioritise.py
 ```
 
-PR #41 was merged into the shared contract branch on 2026-10-22 at `03df6f2`.
-At Dương's request, this implementation remains included in PR #35 while
-contract consensus is pending; it has not reached `main` through that PR yet.
-The assigned reviewer for the original function PR is Bảo (`simble2k`).
-Merging the function PR into the contract branch does not establish the four
-required contract approvals or completion of the final team integration.
+PR #41 was merged into the shared contract branch on 2026-10-22 at `03df6f2`,
+and subsequently merged into `main` via contract PR #35 (`9624c2e`). All 8 prioritise
+tests pass, fulfilling all acceptance criteria of issue #38. The assigned reviewer
+for the original function PR was Bảo (`simble2k`).
 
 AI use: Codex implemented the retained prioritise code and tests and assisted
 verification, documentation and Git/PR preparation for owner Trần Quốc Huy.
+Antigravity updated the completion and closeout status on main.
