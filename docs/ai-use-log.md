@@ -156,5 +156,9 @@ kiểm tra materials/remote, đề xuất và trực tiếp viết dates/stats/C
 soạn tracking/PROGRESS/bản nháp nhận xét Python-C++, cấu hình workflow cá nhân và chuẩn bị Git/PR.
 Code AI tạo được giữ lại. Huy cần xác nhận hiểu code/nhận xét và giờ thực tế; peer review chưa được tự động xác nhận.
 Validation: 3 official W3 +40 additional, 5 W1,27 W2 và51 shared W2 tests passed trên Python3.11.16;
-Ruff phần Huy đạt; toàn repo có6 lỗi W1 của người khác. Official test_w3.py giữ nguyên byte theo source commit
+Ruff phần Huy đạt; Ruff 0.6.9 local có 6 legacy findings W1; CI 0.17.2 được kiểm tra riêng. Official test_w3.py giữ nguyên byte theo source commit
 f30c605c6ff376ac448ddb00fa82ae36347e29a9. E2E là PR riêng chờ shared CLI, chưa coi dependency thiếu là tests passed.
+
+CI follow-up: Codex added explicit check=False to Huy subprocess tests and a PLW1510 per-file
+exception only for the unchanged official test_w3.py. No source/test-group rules are disabled.
+PR56 requests pqquyenn review; latest CI is recorded on the PR.

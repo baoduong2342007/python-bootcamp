@@ -18,6 +18,6 @@ Bảo phụ trách CI cả nhóm, Minh docs/demo, Dương release; chưa tạo t
 
 Official source/hashes: members/tqhuy0602/w3/materials.json. Luôn chạy tests/test_w3.py với --member;
 3 tests official không thay cho additional cases hoặc chứng minh 5 người đã hoàn thành.
-Ruff toàn repo có 6 lỗi W1 có sẵn ở Dương/Minh; phần Huy được kiểm tra riêng nhưng không xem toàn CI đã xanh.
+Ruff 0.6.9 local có 6 legacy findings W1 ở Dương/Minh. Base CI dùng 0.17.2; PLW1510 trong test Huy đã sửa bằng check=False, còn official test_w3.py có exemption riêng để giữ nguyên byte. Xem PR56 cho kết quả CI mới nhất.
 
 AI usage: code owner Trần Quốc Huy; Codex hỗ trợ toàn bộ, gồm generated code/tests/docs và metadata/PR preparation.

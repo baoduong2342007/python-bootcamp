@@ -44,7 +44,7 @@ DS exam: 0.5 h
 Workflow `.github/workflows/w3-tqhuy0602.yml` chạy official/additional tests có --member,
 W1/W2/shared regression và Ruff riêng phần Huy trên Python 3.10/3.12.
 Workflow CI toàn nhóm vẫn là phần Bảo. Ruff toàn repo hiện báo 6 lỗi có sẵn ở W1 của Dương/Minh;
-không sửa source cá nhân của người khác hoặc tắt checks để báo xanh.
+không sửa source cá nhân của người khác. Đây là kết quả local của Ruff 0.6.9, không phải nguyên nhân fail CI 0.17.2.
 
 ## Ba nhận xét Python/C++ — bản nháp để Huy xác nhận
 
@@ -59,3 +59,13 @@ không sửa source cá nhân của người khác hoặc tắt checks để bá
 - Chưa có W3 PR của Dương để Huy review. Core PR16 đã merge với peer approval của Bảo; không nhận review đó là của Huy.
 - PR cá nhân cần peer review/CI/merge. Giờ làm cá nhân chưa được Huy cung cấp; không suy ra từ thời gian chạy AI.
 - Các commits trong phiên này đều ngày 2026-10-25; không giả lập lịch làm nhiều ngày hoặc sửa timestamps.
+
+## CI follow-up
+
+[PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56) đã yêu cầu Quyền review.
+Member CI Python 3.10/3.12 đã đạt ở [run40205079053](https://github.com/baoduong2342007/python-bootcamp/actions/runs/40205079053).
+Base CI dùng Ruff 0.17.2, báo PLW1510 ở subprocess của test Huy và 2 calls trong official test_w3.py.
+Đã thêm check=False vào test Huy vì tests tự kiểm tra exit code; ruff.toml chỉ miễn PLW1510
+cho tests/test_w3.py để giữ nguyên file giảng viên. Không miễn rule cho source hoặc tests nhóm.
+Kết quả 6 lỗi W1 local trước đó thuộc Ruff 0.6.9; không dùng kết quả đó để giải thích log CI 0.17.2.
+Xem live PR cho CI của commit mới nhất.

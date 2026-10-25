@@ -18,6 +18,7 @@ def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
         [sys.executable, "-m", MODULE, *args],
         cwd=ROOT,
         env=env,
+        check=False,
         capture_output=True,
         text=True,
         timeout=10,

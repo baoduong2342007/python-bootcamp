@@ -36,7 +36,7 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | --- | --- | --- | --- | --- | --- | --- |
-| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | Branch py/w3-tqhuy0602; PR link will be recorded after creation | Quyền (`pqquyenn`), review pending | 3 official +40 additional W3;5 W1;27 W2;51 shared W2 passed locally;Ruff Huy passed;repository-wide Ruff has6 pre-existing errors;[evidence](members/tqhuy0602/week3.md) | Not provided by Huy; AI runtime is not personal hours |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56), open; review requested | Quyền (`pqquyenn`), review pending | 3 official +40 additional W3;5 W1;27 W2;51 shared W2 passed locally;Ruff Huy passed;Ruff 0.6.9 local has 6 legacy W1 findings; CI 0.17.2 subprocess findings addressed, current checks on PR;[evidence](members/tqhuy0602/week3.md) | Not provided by Huy; AI runtime is not personal hours |
 
 Tracking all five W3 issues: [docs/w3-tracking.md](docs/w3-tracking.md). Shared E2E #55 depends on CLI #54.
 Review of Dương W3 is pending his PR; no human approvals or multi-day work are inferred from automated activity.
