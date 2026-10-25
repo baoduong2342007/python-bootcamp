@@ -69,3 +69,5 @@ Base CI dùng Ruff 0.17.2, báo PLW1510 ở subprocess của test Huy và 2 call
 cho tests/test_w3.py để giữ nguyên file giảng viên. Không miễn rule cho source hoặc tests nhóm.
 Kết quả 6 lỗi W1 local trước đó thuộc Ruff 0.6.9; không dùng kết quả đó để giải thích log CI 0.17.2.
 Xem live PR cho CI của commit mới nhất.
+
+Một lần full local rerun sau sửa subprocess đạt 42 passed và 1 timeout 10s ở invalid-date (stderr đã có argparse error); chạy lại riêng case đó đạt 1 passed trong 0.49s. CI 3.10/3.12 của commit mới là gate kiểm tra đầy đủ tiếp theo; không xóa ghi nhận lần timeout này.
