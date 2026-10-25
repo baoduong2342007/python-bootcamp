@@ -71,3 +71,9 @@ Kết quả 6 lỗi W1 local trước đó thuộc Ruff 0.6.9; không dùng kế
 Xem live PR cho CI của commit mới nhất.
 
 Một lần full local rerun sau sửa subprocess đạt 42 passed và 1 timeout 10s ở invalid-date (stderr đã có argparse error); chạy lại riêng case đó đạt 1 passed trong 0.49s. CI 3.10/3.12 của commit mới là gate kiểm tra đầy đủ tiếp theo; không xóa ghi nhận lần timeout này.
+
+Final verified CI: overall [run40206335449](https://github.com/baoduong2342007/python-bootcamp/actions/runs/40206335449)
+and Huy matrix [run40206335489](https://github.com/baoduong2342007/python-bootcamp/actions/runs/40206335489)
+succeeded at 23ad463 (Python3.10/3.12). Both matrix jobs run all43 W3 cases plus own/shared regressions.
+The main-only push job is intentionally skipped on pull requests; no official W3 test is skipped in the member jobs.
+PR56 remains open with pqquyenn review requested.
