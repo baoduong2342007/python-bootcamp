@@ -13,6 +13,7 @@ class InfeasiblePlan(Exception):
 
 
 def check_feasible(tasks: list[Task], available_h: float) -> None:
+    """Raise InfeasiblePlan with required/available hours when the budget is short."""
     needed_h = sum(task.effort_h for task in tasks)
     if needed_h > available_h:
         raise InfeasiblePlan(needed_h, available_h)
