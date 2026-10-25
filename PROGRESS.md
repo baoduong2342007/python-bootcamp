@@ -31,3 +31,12 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 - The GitHub branch `py-w1-done` includes the submission record and Minh's W1-2 correction. Its tests pass locally; no pull request has been opened, so this branch has not run through GitHub Actions or merged to `main`.
 - The existing main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff and all five member jobs at `8eaa7e2`. Review approvals were waived by Dương, and the GitHub issue audit did not find a personal Week 1 issue for Quyền; this record does not claim those as completed.
 - The Week 1 completion tag has not been pushed. No separate Moodle upload is specified for the between-session Week 1 homework.
+
+## Week 3 — Huy owner update (2026-10-25)
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | Branch py/w3-tqhuy0602; PR link will be recorded after creation | Quyền (`pqquyenn`), review pending | 3 official +40 additional W3;5 W1;27 W2;51 shared W2 passed locally;Ruff Huy passed;repository-wide Ruff has6 pre-existing errors;[evidence](members/tqhuy0602/week3.md) | Not provided by Huy; AI runtime is not personal hours |
+
+Tracking all five W3 issues: [docs/w3-tracking.md](docs/w3-tracking.md). Shared E2E #55 depends on CLI #54.
+Review of Dương W3 is pending his PR; no human approvals or multi-day work are inferred from automated activity.
