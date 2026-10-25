@@ -21,6 +21,7 @@ def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
         [sys.executable, "-m", "shared.study_planner", *args],
         cwd=ROOT,
         env={**os.environ, "PYTHONPATH": str(ROOT)},
+        check=False,
         capture_output=True,
         text=True,
         timeout=10,
