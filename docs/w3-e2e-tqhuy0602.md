@@ -34,3 +34,20 @@ Nguyên nhân chung đã xác minh: `python -m shared.study_planner` báo thiế
 4. Bảo nối `python -m pytest -q tests_team` vào CI nhóm; peer review/CI đạt rồi mới merge.
 
 Bài W3 cá nhân của Huy ở [PR #56](https://github.com/baoduong2342007/python-bootcamp/pull/56), tách riêng khỏi dependency CLI nhóm.
+
+## Kiểm tra lại — 2026-10-26
+
+Đã fetch origin; main vẫn ở `d19f42d`, issue #54 vẫn mở, chưa có PR shared CLI trong danh sách PR hiện tại.
+Chạy thật trên Python 3.11.16/macOS tại E2E head `30f87c6`:
+
+```text
+python -m pytest -q tests_team --tb=no    16 failed in 0.48s, 0 skipped
+python -m shared.study_planner samples/tasks.csv --hours 2 --today 2026-10-26
+No module named shared.study_planner.__main__; 'shared.study_planner' is a package and cannot be directly executed
+```
+
+Ruff lint và format `tests_team` vẫn đạt. CI hiện tại của PR57 chỉ chạy lint/W1/shared W2,
+chưa chạy `tests_team`; vì vậy CI xanh không chứng minh E2E pass. Giữ PR57 draft và issue #55 mở.
+Không thay tests hoặc tự thêm CLI của owner khác để che dependency.
+Huy xác nhận 7 giờ cá nhân Week 3 ngày 2026-10-26; đã ghi trong PROGRESS ở PR56.
+Codex hỗ trợ toàn bộ lượt đối chiếu, chạy kiểm tra thật và cập nhật tài liệu này.
