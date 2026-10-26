@@ -20,6 +20,6 @@ def primes_up_to(k):
             for j in range(i * i, k + 1, i):
                 nt[j] = False
     for i in range(2, k + 1):
-        if nt[i] == True:
+        if nt[i]:
             ans.append(i)
     return ans

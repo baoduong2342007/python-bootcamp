@@ -12,9 +12,9 @@ def summary(scores: list[float]):
         s += x
     ans["mean"] = round(s / len(scores), 2)
     tmp = sorted(scores)
-    l = len(scores)
-    if l % 2 == 0:
-        ans["median"] = round((tmp[l // 2 - 1] + tmp[l // 2]) / 2, 2)
+    n_scores = len(scores)
+    if n_scores % 2 == 0:
+        ans["median"] = round((tmp[n_scores // 2 - 1] + tmp[n_scores // 2]) / 2, 2)
     else:
-        ans["median"] = round(tmp[l // 2], 2)
+        ans["median"] = round(tmp[n_scores // 2], 2)
     return ans
