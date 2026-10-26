@@ -162,3 +162,12 @@ f30c605c6ff376ac448ddb00fa82ae36347e29a9. E2E là PR riêng chờ shared CLI, ch
 CI follow-up: Codex added explicit check=False to Huy subprocess tests and a PLW1510 per-file
 exception only for the unchanged official test_w3.py. No source/test-group rules are disabled.
 PR56 requests pqquyenn review; latest CI is recorded on the PR.
+
+## Trần Quốc Huy — Week 3 follow-up (2026-10-26)
+
+Code/phần việc do **Trần Quốc Huy (`tqhuy0602`) phụ trách**; **Codex hỗ trợ toàn bộ**:
+đọc issue/peer review, bổ sung hai subprocess tests cho số giờ thập phân, kiểm tra regression
+và hashes materials, cập nhật tracking/docs/PR. Các tests do AI tạo được giữ lại.
+Huy tự báo 7 giờ cá nhân ngày 2026-10-26; thời gian chạy AI không được cộng vào.
+Minh đã approved PR56 tại 7cf44ea; không nhận approval đó là của Huy hoặc Codex.
+E2E không được ghi là đạt khi dependency CLI #54 còn thiếu.

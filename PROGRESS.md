@@ -36,7 +36,7 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | --- | --- | --- | --- | --- | --- | --- |
-| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56), open; review requested | Quyền (`pqquyenn`), review pending | 3 official +40 additional W3;5 W1;27 W2;51 shared W2 passed locally;Ruff Huy passed;W3 matrix 3.10/3.12 and overall CI/Ruff 0.17.2 passed at 23ad463; review/merge pending;[evidence](members/tqhuy0602/week3.md) | Not provided by Huy; AI runtime is not personal hours |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56), open; merge pending | Quyền (`pqquyenn`) requested; Minh (`luongnhatinh`) approved 7cf44ea on 2026-10-26 | 3 official + 42 additional W3; 5 W1; 27 W2; 7 Minh cross-tests; 51 shared W2 passed locally; Ruff Huy passed. CI Python 3.10/3.12 passed at 7cf44ea; see PR for checks after the two fractional-hour regressions. [Evidence](members/tqhuy0602/week3.md) | 7h (Huy self-reported 2026-10-26; excludes automated runtime) |
 
 Tracking all five W3 issues: [docs/w3-tracking.md](docs/w3-tracking.md). Shared E2E #55 depends on CLI #54.
 Review of Dương W3 is pending his PR; no human approvals or multi-day work are inferred from automated activity.

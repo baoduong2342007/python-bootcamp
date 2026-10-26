@@ -77,3 +77,37 @@ and Huy matrix [run40206335489](https://github.com/baoduong2342007/python-bootca
 succeeded at 23ad463 (Python3.10/3.12). Both matrix jobs run all43 W3 cases plus own/shared regressions.
 The main-only push job is intentionally skipped on pull requests; no official W3 test is skipped in the member jobs.
 PR56 remains open with pqquyenn review requested.
+
+## Follow-up — 2026-10-26
+
+Huy xác nhận **7 giờ cá nhân** cho Week 3 trong phiên này; không tính thời gian Codex chạy.
+Minh (`luongnhatinh`) đã APPROVED PR56 tại `7cf44ea` lúc 09:27 ngày 2026-10-26 (giờ Việt Nam).
+Quyền vẫn là reviewer được yêu cầu theo vòng nhóm. PR chưa merge nên issue #50 vẫn mở.
+
+Đối chiếu hai câu hỏi trong review:
+
+- Biên năm 9999 đã được kiểm tra bởi `test_out_of_range_due` với `date.max`, `tomorrow`,
+  `Fri` và số ngày cực lớn; đều phải trả `ValueError`. `test_invalid_due` kiểm tra `in -1 days`.
+  Cú pháp số ngày âm bị từ chối; không có phép trừ ngày trong public contract.
+- CLI truyền trực tiếp `task.effort_h` từ personal Task sang shared Task, không ép sang int
+  hoặc làm tròn ở boundary. Bổ sung hai subprocess cases với effort `0.125/0.375` và `0.1/0.3`,
+  budget `0.25`; xác nhận thứ tự, số giờ phân bổ và hai streams. Float vẫn có độ chính xác
+  nhị phân thông thường; `render` dùng định dạng `g`, nên không khẳng định độ chính xác thập phân tùy ý.
+
+Local Python 3.11.16/macOS sau bổ sung: **111 passed, 0 skipped** khi chạy W3 (45), W1 (5),
+official W2 (3), Minh cross-tests (7), shared W2 (51) trong cùng lệnh:
+
+```text
+python -m pytest -q tests/test_w3.py members/tqhuy0602/w3/tests tests/test_w1.py tests/test_w2.py members/tqhuy0602/w2 members/tqhuy0602/w2/tests_for_luongnhatinh.py tests/shared_w2 --member tqhuy0602 --variant 2
+```
+
+Pytest chọn file cross-test được nêu tường minh trong thư mục W2 ở lệnh trên, nên chạy riêng
+`python -m pytest -q tests/test_w2.py members/tqhuy0602/w2 --member tqhuy0602` để kiểm tra thêm
+toàn bộ W2 personal; kết quả 27 passed. Ruff lint phần Huy và format W3 đạt.
+SHA-256 của cả bốn file trong `w3/materials.json` vẫn khớp, gồm tests giảng viên và samples.
+CI đã đạt tại `7cf44ea`: [CI tổng](https://github.com/baoduong2342007/python-bootcamp/actions/runs/40206896102),
+[Python 3.10/3.12](https://github.com/baoduong2342007/python-bootcamp/actions/runs/40206896095).
+Kiểm tra CI của commit bổ sung tại PR56; approval nêu trên thuộc commit trước bổ sung.
+
+E2E #55 vẫn phụ thuộc #54 đang mở, chưa có shared `__main__.py` trên main `d19f42d`.
+Codex hỗ trợ toàn bộ việc đối chiếu review, bổ sung tests, chạy kiểm tra và cập nhật tài liệu/Git.
