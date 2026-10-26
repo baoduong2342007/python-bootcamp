@@ -22,7 +22,13 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 | Member 4 - Minh (luongnhatinh) | w2 | [#30](https://github.com/baoduong2342007/python-bootcamp/issues/30) | [#31](https://github.com/baoduong2342007/python-bootcamp/pull/31) merged | Member 2 - Huy (`tqhuy0602`) | 3 official passed (`--member luongnhatinh`); 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
 | Member 5 - Bao (simble2k) | w2 | [#43](https://github.com/baoduong2342007/python-bootcamp/issues/43) | [#44](https://github.com/baoduong2342007/python-bootcamp/pull/44) merged | Member 3 - Quyen (`pqquyenn`) | 3 official passed (`--member simble2k`); 13 edge tests passed; 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
 
-## Week 1 closeout snapshot (2026-10-16)
+## Week 3
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56) (Approved by Minh) | Quyền (`pqquyenn`), reviewed by Minh (`luongnhatinh`) | 3 official + 40 additional W3; 5 W1; 27 W2; 51 shared W2 passed; Ruff clean | ~2h (self-reported) |
+| Lương Nhật Minh (`luongnhatinh`) | w3 | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | py/w3-luongnhatinh | Bảo (`simble2k`) | 3 official + 15 additional W3; 5 W1; 3 W2; 51 shared W2 passed; Ruff clean | ~2.5h (self-reported) |
+
 
 - Group follow-up PR [#27](https://github.com/baoduong2342007/python-bootcamp/pull/27) is merged into `main` at `8eaa7e2`.
 - Main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff, the tokenization regression, and all five member jobs on Python 3.12.

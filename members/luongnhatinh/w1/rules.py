@@ -1,4 +1,6 @@
 """W1-3: Thesis eligibility module."""
+
+
 def can_register_thesis(credits: int, gpa: float) -> bool:
     return bool(credits >= 120 and gpa >= 2.0)
 

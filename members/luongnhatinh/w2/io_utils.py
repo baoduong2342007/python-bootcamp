@@ -35,7 +35,12 @@ def load_tasks(path: str | Path) -> list[Task]:
                 importance = int(row[1].strip())
                 effort_h = float(row[2].strip())
                 deadline = date.fromisoformat(row[3].strip())
-                task = Task(title=title, importance=importance, effort_h=effort_h, deadline=deadline)
+                task = Task(
+                    title=title,
+                    importance=importance,
+                    effort_h=effort_h,
+                    deadline=deadline,
+                )
             except Exception as exc:
                 raise ValueError(f"Invalid task data at line {line_no}: {exc}") from exc
 
