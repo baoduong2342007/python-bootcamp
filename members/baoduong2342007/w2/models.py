@@ -12,8 +12,10 @@ class Task:
     deadline: date
 
     def __post_init__(self) -> None:
+        """Validate the allowed importance range."""
         if not 1 <= self.importance <= 5:
             raise ValueError("importance must be between 1 and 5")
 
     def days_left(self, today: date) -> int:
+        """Return remaining whole days, bounded below by zero."""
         return max(0, (self.deadline - today).days)

@@ -4,14 +4,15 @@ def binary_search(a : list[int] , key : int) -> int :
     Both languages use zero-based indexing, but Python lists grow dynamically and
     do not require a separately declared array length.
     """
-    l = 0
+    left = 0
     r = len(a) - 1
-    while (l <= r) :
-        mid = (l + r) // 2
+    while (left <= r) :
+        mid = (left + r) // 2
         if (a[mid] == key) :
             return mid
         if (a[mid] < key) :
-            l = mid + 1
+            left = mid + 1
         else :
             r = mid - 1
     return -1
+

@@ -1,4 +1,5 @@
 def summary(scores: list[float]) -> dict[str , float] :
+    """Return minimum, maximum, mean and median of nonempty scores."""
     if (len(scores) == 0) :
         raise ValueError('scores must not be empty')
 
