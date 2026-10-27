@@ -15,6 +15,7 @@ def word_count(text: str) -> dict[str, int]:
     return counts
 
 def top_k(text: str, k: int) -> list[tuple[str, int]]:
+    """Return the most frequent words with alphabetical tie breaks."""
     if (k <= 0) :
         return []
 

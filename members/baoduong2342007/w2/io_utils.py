@@ -10,6 +10,7 @@ from .models import Task
 
 
 def load_tasks(path: str | Path) -> list[Task]:
+    """Read and validate tasks from a UTF-8 CSV file."""
     tasks = []
     with open(path, encoding="utf-8", newline="") as source:
         reader = csv.DictReader(source)
@@ -36,6 +37,7 @@ def load_tasks(path: str | Path) -> list[Task]:
 
 
 def save_json(tasks: list[Task], path: str | Path) -> None:
+    """Write tasks as JSON with ISO deadlines."""
     rows = [dict(asdict(task), deadline=task.deadline.isoformat()) for task in tasks]
     with open(path, "w", encoding="utf-8") as destination:
         json.dump(rows, destination, ensure_ascii=False, indent=2)
