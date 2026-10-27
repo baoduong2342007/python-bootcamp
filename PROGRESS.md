@@ -26,6 +26,7 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 
 | Member | Week | Issue | PR | Reviewer | Tests | Hours |
 | --- | --- | --- | --- | --- | --- | --- |
+| Dương (`baoduong2342007`) | w3 | [#49](https://github.com/baoduong2342007/python-bootcamp/issues/49) | [#60](https://github.com/baoduong2342007/python-bootcamp/pull/60) merged | Huy (`tqhuy0602`), review not recorded | At main 6dff1c1: 6 W3, 31 W1/W2 + edge, 16 shared E2E passed locally; Ruff 0.17.3 clean | Pending self-report |
 | Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56) (Approved by Minh) | Quyền (`pqquyenn`), reviewed by Minh (`luongnhatinh`) | 3 official + 40 additional W3; 5 W1; 27 W2; 51 shared W2 passed; Ruff clean | ~2h (self-reported) |
 | Lương Nhật Minh (`luongnhatinh`) | w3 | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | py/w3-luongnhatinh | Bảo (`simble2k`) | 3 official + 15 additional W3; 5 W1; 3 W2; 51 shared W2 passed; Ruff clean | ~2.5h (self-reported) |
 

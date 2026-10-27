@@ -16,6 +16,22 @@ python -m members.baoduong2342007.w3.cli samples/tasks.csv --hours 2 --today 202
 
 Codex generated the implementation, tests and W1/W2 annotations and lint fixes at
 Dương's request. The official test file is copied from public_materials commit
-f30c605c6ff376ac448ddb00fa82ae36347e29a9. Dương must review and explain the work;
-peer review, PR/issue links, actual hours, three self-written Python/C++ comparison
-lines, and merge remain pending. This file does not assert those actions happened.
+f30c605c6ff376ac448ddb00fa82ae36347e29a9. The work was merged in [PR #60](https://github.com/baoduong2342007/python-bootcamp/pull/60),
+linked to [issue #49](https://github.com/baoduong2342007/python-bootcamp/issues/49).
+Dương must review and explain the work; peer review, actual hours and three
+self-written Python/C++ comparison lines remain pending. No personal actions are
+inferred by this note.
+
+
+## Verification on main, 2026-10-27
+
+At main commit `6dff1c1`, Codex ran the official W3 tests and personal W3
+boundary tests: 6 passed; W1/W2 and W2 edge regression: 31 passed; shared
+planner E2E: 16 passed. Ruff 0.17.3 passed across the repository. These are
+local Python 3.12 results, not a fresh-clone or peer-review claim.
+
+Possible points for Dương to consider and write in his own words: Python's
+`datetime` handles calendar arithmetic; `sorted` creates a new list whereas
+C++ `std::sort` modifies a range; Python type hints do not enforce runtime
+validation as C++ static types do. These suggestions are AI-generated, not
+self-written reflection.
