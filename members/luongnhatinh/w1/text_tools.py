@@ -18,5 +18,7 @@ def top_k(text: str, k: int) -> list[tuple[str, int]]:
     if k <= 0:
         return []
 
-    ranked_words = sorted(word_count(text).items(), key=lambda item: (-item[1], item[0]))
+    ranked_words = sorted(
+        word_count(text).items(), key=lambda item: (-item[1], item[0])
+    )
     return ranked_words[:k]
