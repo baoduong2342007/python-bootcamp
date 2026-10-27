@@ -148,3 +148,26 @@
   - AI assistance was used to check and resolve Ruff warnings: refactored dictionary value iteration in `members/luongnhatinh/w1/timetable.py` to eliminate `PLC0206`, formatted the import block in `members/luongnhatinh/w1/translate.py` to resolve `I001`, and fixed escaped Markdown characters in the PR #13 body.
   - Follow-up verification for TV4: 5 official tests passed with 0 skips (`--member luongnhatinh --variant 4`), Ruff clean (`All checks passed!`). TV4 personal follow-up PR #20 opened and requested Bao (@simble2k) to review.
   - AI assisted with drafting team documentation for function interfaces (TV1–TV4), logging the official test source revision `2c6edc79772984f6a6ca0c3664ad0a49c907e80a` and upstream audit, recording review notes for Quyên's PR #14, and preparing the team documentation PR.
+
+## Week 3 — Trần Quốc Huy (2026-10-25)
+
+Người phụ trách code: **Trần Quốc Huy (`tqhuy0602`)**. **Codex hỗ trợ toàn bộ**: đọc kế hoạch,
+kiểm tra materials/remote, đề xuất và trực tiếp viết dates/stats/CLI/tests, bổ sung docstrings W2,
+soạn tracking/PROGRESS/bản nháp nhận xét Python-C++, cấu hình workflow cá nhân và chuẩn bị Git/PR.
+Code AI tạo được giữ lại. Huy cần xác nhận hiểu code/nhận xét và giờ thực tế; peer review chưa được tự động xác nhận.
+Validation: 3 official W3 +40 additional, 5 W1,27 W2 và51 shared W2 tests passed trên Python3.11.16;
+Ruff phần Huy đạt; Ruff 0.6.9 local có 6 legacy findings W1; CI 0.17.2 được kiểm tra riêng. Official test_w3.py giữ nguyên byte theo source commit
+f30c605c6ff376ac448ddb00fa82ae36347e29a9. E2E là PR riêng chờ shared CLI, chưa coi dependency thiếu là tests passed.
+
+CI follow-up: Codex added explicit check=False to Huy subprocess tests and a PLW1510 per-file
+exception only for the unchanged official test_w3.py. No source/test-group rules are disabled.
+PR56 requests pqquyenn review; latest CI is recorded on the PR.
+
+## Trần Quốc Huy — Week 3 follow-up (2026-10-26)
+
+Code/phần việc do **Trần Quốc Huy (`tqhuy0602`) phụ trách**; **Codex hỗ trợ toàn bộ**:
+đọc issue/peer review, bổ sung hai subprocess tests cho số giờ thập phân, kiểm tra regression
+và hashes materials, cập nhật tracking/docs/PR. Các tests do AI tạo được giữ lại.
+Huy tự báo 7 giờ cá nhân ngày 2026-10-26; thời gian chạy AI không được cộng vào.
+Minh đã approved PR56 tại 7cf44ea; không nhận approval đó là của Huy hoặc Codex.
+E2E không được ghi là đạt khi dependency CLI #54 còn thiếu.

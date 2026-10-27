@@ -1,0 +1,4 @@
+# Keep the official instructor test byte-for-byte. Inspect subprocess return codes
+# in our own tests explicitly; this exception applies only to the imported file.
+[lint.per-file-ignores]
+"tests/test_w3.py" = ["PLW1510"]
