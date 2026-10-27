@@ -1,6 +1,7 @@
 """Command-line interface for the study planner."""
 
 import argparse
+import math
 import sys
 from datetime import date
 from pathlib import Path
@@ -36,8 +37,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
 
-    if args.hours <= 0:
-        sys.stderr.write("Error: --hours must be greater than zero.\n")
+    if not math.isfinite(args.hours) or args.hours <= 0:
+        sys.stderr.write("Error: --hours must be greater than zero and finite.\n")
         return 1
 
     if args.today is not None:
@@ -56,16 +57,23 @@ def main(argv: list[str] | None = None) -> int:
         sys.stderr.write(f"Error loading CSV file: {exc}\n")
         return 1
 
-    # Convert personal Task instances to shared Task instances at the boundary
-    shared_tasks = [
-        SharedTask(
-            title=t.title,
-            importance=t.importance,
-            effort_h=t.effort_h,
-            deadline=t.deadline,
-        )
-        for t in personal_tasks
-    ]
+    # Convert personal tasks at the shared contract boundary, reporting bad input.
+    try:
+        shared_tasks = []
+        for task in personal_tasks:
+            if not math.isfinite(task.effort_h):
+                raise ValueError(f"effort for {task.title!r} must be finite")
+            shared_tasks.append(
+                SharedTask(
+                    title=task.title,
+                    importance=task.importance,
+                    effort_h=task.effort_h,
+                    deadline=task.deadline,
+                )
+            )
+    except ValueError as exc:
+        sys.stderr.write(f"Error loading CSV file: {exc}\n")
+        return 1
 
     prioritised = prioritise(shared_tasks, today_date)
     allocated_blocks = allocate(prioritised, args.hours)

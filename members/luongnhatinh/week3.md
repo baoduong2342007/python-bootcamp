@@ -64,3 +64,10 @@ python -m ruff format --check members/luongnhatinh/w3
 ## 4. AI Use Disclosure
 
 AI coding assistant (Antigravity AI) was utilized for scaffolding regex patterns in `dates.py`, nearest-rank index calculations, and boundary test fixtures. All generated code was manually inspected, type-checked, and verified against edge cases.
+
+### Review fixes — 2026-10-27
+
+At Dương's request, Codex fixed the W3 CLI to reject non-finite hour budgets
+and to report invalid shared-task effort (negative or non-finite) without a
+traceback. Codex added subprocess regression tests. Minh should review and
+confirm these changes; this entry does not claim that he authored the fixes.
