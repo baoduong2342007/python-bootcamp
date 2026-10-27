@@ -1,0 +1,3 @@
+# Preserve the instructor test byte-for-byte; its subprocess calls predate this rule.
+[lint.per-file-ignores]
+"tests/test_w3.py" = ["PLW1510"]

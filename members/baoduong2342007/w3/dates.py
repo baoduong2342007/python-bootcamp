@@ -3,7 +3,6 @@
 import re
 from datetime import date, timedelta
 
-
 _WEEKDAYS = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
 
 
