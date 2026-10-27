@@ -191,6 +191,29 @@ the approved contract, shared functions, integration and CI pass the team gates.
 The verified metadata and open access/deadline items are recorded in
 [Huy's W2 workflow audit](docs/w2-workflow-audit.md).
 
+## Week 3: Run and Verify
+
+Run commands from the repository root. Use Python 3.12 with pytest and Ruff installed.
+
+For member Bảo (`simble2k`):
+
+```bash
+# Three instructor tests for W3-1 to W3-3 (Dates, Stats, CLI)
+python -m pytest -q tests/test_w3.py --member simble2k
+
+# Comprehensive personal unit tests for W3
+python -m pytest -q members/simble2k/w3/tests
+
+# Run personal CLI
+python -m members.simble2k.w3.cli samples/tasks.csv --hours 2 --today 2026-10-26
+
+# Linter and formatting check
+python -m ruff check members/simble2k/w3 tests/test_w3.py
+python -m ruff format --check members/simble2k/w3 tests/test_w3.py
+```
+
+For other members, replace `--member simble2k` with the corresponding folder name under `members/`.
+
 ## Course Materials & Tests Source
 
 The exercises follow Chapter 18 of **Git & GitHub for Team Projects**. Instructor materials and reference tests are available in [CSC10014 public materials](https://github.com/CSC10014-at-fit-hcmus/public_materials).
