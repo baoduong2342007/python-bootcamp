@@ -10,7 +10,9 @@ def main() -> None:
 
     tasks = load_tasks(samples_path)
     for task in tasks:
-        print(f"Task: {task.title} | Importance: {task.importance} | Effort: {task.effort_h}h | Deadline: {task.deadline}")
+        print(
+            f"Task: {task.title} | Importance: {task.importance} | Effort: {task.effort_h}h | Deadline: {task.deadline}"
+        )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+{
+  "commit": "f30c605c6ff376ac448ddb00fa82ae36347e29a9",
+  "verified_date": "2026-10-25",
+  "source": "https://github.com/CSC10014-at-fit-hcmus/public_materials",
+  "files": {
+    "tests/test_w3.py": {
+      "sha256": "2ad0f0fef08fa694aeee2231460ed87f548798616f8c40f938fbb54dcbd38112",
+      "official_identical": true
+    },
+    "tests/conftest.py": {
+      "sha256": "d482fb7e349db5267113db7af53bff7df175e51c48c4e17d60ae80c0ee4f5bb8",
+      "official_identical": true
+    },
+    "samples/tasks.csv": {
+      "sha256": "d2a1c85d61259938e7f6dffc85b2330056281a4ea90b8e6891b1dc76e9245c68",
+      "official_identical": true
+    },
+    "samples/tasks_bad.csv": {
+      "sha256": "17a5a63fff1c5fa856d4024d2e295ddaf6d00476638680567e5982588376287d",
+      "official_identical": true
+    }
+  }
+}

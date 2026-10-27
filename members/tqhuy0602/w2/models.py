@@ -6,6 +6,8 @@ from datetime import date
 
 @dataclass
 class Task:
+    """Personal CSV task; shared planner conversion happens at the W3 boundary."""
+
     title: str
     importance: int
     effort_h: float

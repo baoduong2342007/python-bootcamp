@@ -12,7 +12,7 @@ def load_tasks(path: str | Path) -> list[Task]:
         raise FileNotFoundError(f"File not found: {file_path}")
 
     tasks: list[Task] = []
-    with open(file_path, mode="r", encoding="utf-8") as f:
+    with open(file_path, encoding="utf-8") as f:
         reader = csv.reader(f)
         try:
             header = next(reader)
@@ -35,7 +35,12 @@ def load_tasks(path: str | Path) -> list[Task]:
                 importance = int(row[1].strip())
                 effort_h = float(row[2].strip())
                 deadline = date.fromisoformat(row[3].strip())
-                task = Task(title=title, importance=importance, effort_h=effort_h, deadline=deadline)
+                task = Task(
+                    title=title,
+                    importance=importance,
+                    effort_h=effort_h,
+                    deadline=deadline,
+                )
             except Exception as exc:
                 raise ValueError(f"Invalid task data at line {line_no}: {exc}") from exc
 

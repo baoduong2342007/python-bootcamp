@@ -22,7 +22,13 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 | Member 4 - Minh (luongnhatinh) | w2 | [#30](https://github.com/baoduong2342007/python-bootcamp/issues/30) | [#31](https://github.com/baoduong2342007/python-bootcamp/pull/31) merged | Member 2 - Huy (`tqhuy0602`) | 3 official passed (`--member luongnhatinh`); 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
 | Member 5 - Bao (simble2k) | w2 | [#43](https://github.com/baoduong2342007/python-bootcamp/issues/43) | [#44](https://github.com/baoduong2342007/python-bootcamp/pull/44) merged | Member 3 - Quyen (`pqquyenn`) | 3 official passed (`--member simble2k`); 13 edge tests passed; 5 cross-tests passed; package runs; Ruff clean | ~2.5h (self-reported) |
 
-## Week 1 closeout snapshot (2026-10-16)
+## Week 3
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56) (Approved by Minh) | Quyền (`pqquyenn`), reviewed by Minh (`luongnhatinh`) | 3 official + 40 additional W3; 5 W1; 27 W2; 51 shared W2 passed; Ruff clean | ~2h (self-reported) |
+| Lương Nhật Minh (`luongnhatinh`) | w3 | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | py/w3-luongnhatinh | Bảo (`simble2k`) | 3 official + 15 additional W3; 5 W1; 3 W2; 51 shared W2 passed; Ruff clean | ~2.5h (self-reported) |
+
 
 - Group follow-up PR [#27](https://github.com/baoduong2342007/python-bootcamp/pull/27) is merged into `main` at `8eaa7e2`.
 - Main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff, the tokenization regression, and all five member jobs on Python 3.12.
@@ -31,3 +37,12 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 - The GitHub branch `py-w1-done` includes the submission record and Minh's W1-2 correction. Its tests pass locally; no pull request has been opened, so this branch has not run through GitHub Actions or merged to `main`.
 - The existing main CI run [38889875835](https://github.com/baoduong2342007/python-bootcamp/actions/runs/38889875835) passed Ruff and all five member jobs at `8eaa7e2`. Review approvals were waived by Dương, and the GitHub issue audit did not find a personal Week 1 issue for Quyền; this record does not claim those as completed.
 - The Week 1 completion tag has not been pushed. No separate Moodle upload is specified for the between-session Week 1 homework.
+
+## Week 3 — Huy owner update (2026-10-25)
+
+| Member | Week | Issue | PR | Reviewer | Tests | Hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56), open; merge pending | Quyền (`pqquyenn`) requested; Minh (`luongnhatinh`) approved 7cf44ea on 2026-10-26 | 3 official + 42 additional W3; 5 W1; 27 W2; 7 Minh cross-tests; 51 shared W2 passed locally; Ruff Huy passed. CI Python 3.10/3.12 passed at 7cf44ea; see PR for checks after the two fractional-hour regressions. [Evidence](members/tqhuy0602/week3.md) | 7h (Huy self-reported 2026-10-26; excludes automated runtime) |
+
+Tracking all five W3 issues: [docs/w3-tracking.md](docs/w3-tracking.md). Shared E2E #55 depends on CLI #54.
+Review of Dương W3 is pending his PR; no human approvals or multi-day work are inferred from automated activity.

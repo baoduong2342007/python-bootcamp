@@ -8,4 +8,3 @@ def by_day(entries: list[tuple[str, str]]) -> dict[str, list[str]]:
     for courses in result.values():
         courses.sort()
     return result
-

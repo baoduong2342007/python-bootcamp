@@ -8,7 +8,9 @@ class InfeasiblePlan(Exception):
         self.needed_h = needed_h
         self.available_h = available_h
         if not message:
-            message = f"Infeasible plan: needed {needed_h}h exceeds available {available_h}h"
+            message = (
+                f"Infeasible plan: needed {needed_h}h exceeds available {available_h}h"
+            )
         super().__init__(message)
 
 

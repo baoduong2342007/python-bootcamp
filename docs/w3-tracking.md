@@ -1,0 +1,23 @@
+# PY-W3 tracking — cập nhật 2026-10-25 bởi phần việc Huy
+
+Dùng milestone PY-W3 (#3), labels python-hw/w3/team-hw có sẵn, không tạo trùng.
+Chưa có ngày hạn LMS được xác nhận; không đặt due date suy đoán.
+
+| Owner | Issue cá nhân | Reviewer | Trạng thái |
+| --- | --- | --- | --- |
+| Dương `baoduong2342007` | [#49](https://github.com/baoduong2342007/python-bootcamp/issues/49) | Huy | Chờ owner triển khai/PR; Huy review khi có PR |
+| Trần Quốc Huy `tqhuy0602` | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | Quyền requested; Minh approved 7cf44ea | PR56 có code/tests; bổ sung 2 cases giờ thập phân sau review; 7h do Huy xác nhận ngày 2026-10-26; chờ merge, xem PROGRESS/PR cho CI mới nhất |
+| Quyền `pqquyenn` | [#51](https://github.com/baoduong2342007/python-bootcamp/issues/51) | Minh | Chờ owner |
+| Minh `luongnhatinh` | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | Bảo | Chờ owner |
+| Bảo `simble2k` | [#53](https://github.com/baoduong2342007/python-bootcamp/issues/53) | Dương | Chờ owner |
+
+Shared CLI contract/entry/error handling: [#54](https://github.com/baoduong2342007/python-bootcamp/issues/54), Dương + Quyền.
+Huy E2E: [#55](https://github.com/baoduong2342007/python-bootcamp/issues/55), phụ thuộc #54.
+Không tự viết thêm CLI thứ hai hoặc nhận phần implementation của owner khác.
+Bảo phụ trách CI cả nhóm, Minh docs/demo, Dương release; chưa tạo tag py-w3-done.
+
+Official source/hashes: members/tqhuy0602/w3/materials.json. Luôn chạy tests/test_w3.py với --member;
+3 tests official không thay cho additional cases hoặc chứng minh 5 người đã hoàn thành.
+Ruff 0.6.9 local có 6 legacy findings W1 ở Dương/Minh. Base CI dùng 0.17.2; PLW1510 trong test Huy đã sửa bằng check=False, còn official test_w3.py có exemption riêng để giữ nguyên byte. Xem PR56 cho kết quả CI mới nhất.
+
+AI usage: code owner Trần Quốc Huy; Codex hỗ trợ toàn bộ, gồm generated code/tests/docs và metadata/PR preparation.
