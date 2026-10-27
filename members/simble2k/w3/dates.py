@@ -1,7 +1,7 @@
 """Date parsing utility for dynamic deadline handling."""
 
-from datetime import date, timedelta
 import re
+from datetime import date, timedelta
 
 WEEKDAYS: dict[str, int] = {
     "mon": 0,
@@ -45,7 +45,7 @@ def parse_due(text: str, today: date) -> date:
         ValueError: If text cannot be parsed into a valid date or is empty.
     """
     if not isinstance(text, str):
-        raise ValueError(
+        raise TypeError(
             f"Expected string for date specification, got {type(text).__name__}"
         )
 

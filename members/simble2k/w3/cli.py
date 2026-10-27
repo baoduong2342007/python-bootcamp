@@ -1,9 +1,9 @@
 """Command-line interface for the study planner (personal Week 3 exercise)."""
 
 import argparse
+import sys
 from datetime import date
 from pathlib import Path
-import sys
 
 from members.simble2k.w2.io_utils import load_tasks
 from shared.contract import Task as SharedTask
@@ -83,7 +83,7 @@ def main(argv: list[str] | None = None) -> int:
         print(output)
         return 0
 
-    except Exception as exc:
+    except (OSError, UnicodeError, ValueError) as exc:
         print(f"Error processing plan: {exc}", file=sys.stderr)
         return 1
 

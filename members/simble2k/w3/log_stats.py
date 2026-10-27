@@ -1,7 +1,7 @@
 """Router log performance analysis and p95 latency calculation."""
 
-from collections import defaultdict
 import math
+from collections import defaultdict
 from typing import Any
 
 

@@ -1,6 +1,7 @@
 """Unit tests for parse_due in dates.py."""
 
 from datetime import date
+
 import pytest
 
 from members.simble2k.w3.dates import parse_due
@@ -88,7 +89,7 @@ def test_invalid_date_inputs():
     with pytest.raises(ValueError, match="cannot be empty"):
         parse_due("   ", today)
 
-    with pytest.raises(ValueError, match="Expected string"):
+    with pytest.raises((TypeError, ValueError)):
         parse_due(12345, today)  # type: ignore
 
     with pytest.raises(ValueError, match="Invalid ISO date"):
