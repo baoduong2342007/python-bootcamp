@@ -28,7 +28,7 @@ Once passing, Member 5 records `4 official + 1 extra`. Do not describe the addit
 | --- | --- | --- | --- | --- | --- | --- |
 | Trần Quốc Huy (`tqhuy0602`) | w3 | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | [PR56](https://github.com/baoduong2342007/python-bootcamp/pull/56) (Approved by Minh) | Quyền (`pqquyenn`), reviewed by Minh (`luongnhatinh`) | 3 official + 40 additional W3; 5 W1; 27 W2; 51 shared W2 passed; Ruff clean | ~2h (self-reported) |
 | Lương Nhật Minh (`luongnhatinh`) | w3 | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | py/w3-luongnhatinh | Bảo (`simble2k`) | 3 official + 15 additional W3; 5 W1; 3 W2; 51 shared W2 passed; Ruff clean | ~2.5h (self-reported) |
-| Member 5 - Bao (simble2k) | w3 | [#53](https://github.com/baoduong2342007/python-bootcamp/issues/53) | [#62](https://github.com/baoduong2342007/python-bootcamp/pull/62) (open) | Member 1 - Duong (`baoduong2342007`) | 3 official passed (`--member simble2k`); 17 unit tests passed (`test_dates`, `test_log_stats`, `test_cli`); Ruff clean | ~2.5h (self-reported) |
+| Member 5 - Bao (simble2k) | w3 | [#53](https://github.com/baoduong2342007/python-bootcamp/issues/53) | [#62](https://github.com/baoduong2342007/python-bootcamp/pull/62) (open) | Member 1 - Duong (`baoduong2342007`) | 3 official passed (`--member simble2k`); 18 unit tests passed; W1/W2/shared regression passed; Ruff clean | ~2.5h (self-reported) |
 
 
 - Group follow-up PR [#27](https://github.com/baoduong2342007/python-bootcamp/pull/27) is merged into `main` at `8eaa7e2`.

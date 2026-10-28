@@ -43,10 +43,44 @@ def test_cli_subprocess_missing_file():
     assert "does not exist" in res.stderr
 
 
+def test_cli_subprocess_invalid_hours_nan_and_inf():
+    # Subprocess test with --hours nan
+    cmd_nan = [
+        sys.executable,
+        "-m",
+        "members.simble2k.w3.cli",
+        str(SAMPLES / "tasks.csv"),
+        "--hours",
+        "nan",
+        "--today",
+        "2026-10-26",
+    ]
+    res_nan = subprocess.run(cmd_nan, check=False, capture_output=True, text=True)
+    assert res_nan.returncode == 2
+
+    # Subprocess test with --hours inf
+    cmd_inf = [
+        sys.executable,
+        "-m",
+        "members.simble2k.w3.cli",
+        str(SAMPLES / "tasks.csv"),
+        "--hours",
+        "inf",
+        "--today",
+        "2026-10-26",
+    ]
+    res_inf = subprocess.run(cmd_inf, check=False, capture_output=True, text=True)
+    assert res_inf.returncode == 2
+
+
 def test_cli_invalid_arguments():
-    # Negative hours
-    code = main([str(SAMPLES / "tasks.csv"), "--hours", "-1"])
-    assert code == 2
+    # Negative and non-positive hours
+    assert main([str(SAMPLES / "tasks.csv"), "--hours", "-1"]) == 2
+    assert main([str(SAMPLES / "tasks.csv"), "--hours", "0"]) == 2
+
+    # Non-finite hours (NaN and Inf)
+    assert main([str(SAMPLES / "tasks.csv"), "--hours", "nan"]) == 2
+    assert main([str(SAMPLES / "tasks.csv"), "--hours", "inf"]) == 2
 
     # Invalid ISO date format
     code_bad_date = main(

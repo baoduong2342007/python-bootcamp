@@ -1,6 +1,7 @@
 """Command-line interface for the study planner (personal Week 3 exercise)."""
 
 import argparse
+import math
 import sys
 from datetime import date
 from pathlib import Path
@@ -8,6 +9,19 @@ from pathlib import Path
 from members.simble2k.w2.io_utils import load_tasks
 from shared.contract import Task as SharedTask
 from shared.study_planner import allocate, prioritise, render
+
+
+def positive_finite_hours(text: str) -> float:
+    """Validate a finite positive CLI budget using argparse's exit-2 path."""
+    try:
+        hours = float(text)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(
+            "hours must be a positive finite number"
+        ) from exc
+    if not math.isfinite(hours) or hours <= 0:
+        raise argparse.ArgumentTypeError("hours must be a positive finite number")
+    return hours
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -23,7 +37,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--hours",
-        type=float,
+        type=positive_finite_hours,
         required=True,
         help="Total available study hours.",
     )
@@ -39,10 +53,13 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     """CLI entry point. Returns exit code 0 on success, 1 on error, 2 on bad arguments."""
     parser = build_parser()
-    args = parser.parse_args(argv)
+    try:
+        args = parser.parse_args(argv)
+    except SystemExit as exc:
+        return exc.code if isinstance(exc.code, int) else 2
 
-    if args.hours < 0:
-        print("Error: --hours must be non-negative.", file=sys.stderr)
+    if not math.isfinite(args.hours) or args.hours <= 0:
+        print("Error: --hours must be a positive finite number.", file=sys.stderr)
         return 2
 
     if args.today:

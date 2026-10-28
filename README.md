@@ -209,7 +209,7 @@ python -m members.simble2k.w3.cli samples/tasks.csv --hours 2 --today 2026-10-26
 
 # Linter and formatting check
 python -m ruff check members/simble2k/w3 tests/test_w3.py
-python -m ruff format --check members/simble2k/w3 tests/test_w3.py
+python -m ruff format --check members/simble2k/w3
 ```
 
 For other members, replace `--member simble2k` with the corresponding folder name under `members/`.
