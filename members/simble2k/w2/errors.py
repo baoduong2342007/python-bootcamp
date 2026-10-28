@@ -9,6 +9,7 @@ class InfeasiblePlan(Exception):
     """Raised when available hours cannot cover total needed effort."""
 
     def __init__(self, needed_h: float, available_h: float) -> None:
+        """Initialize with needed effort and available hours budget."""
         self.needed_h = float(needed_h)
         self.available_h = float(available_h)
         super().__init__(

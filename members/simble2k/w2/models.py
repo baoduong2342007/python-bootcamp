@@ -13,6 +13,7 @@ class Task:
     deadline: date
 
     def __post_init__(self) -> None:
+        """Validate importance bounds and ensure non-negative finite effort."""
         if not (1 <= self.importance <= 5):
             raise ValueError("importance must be between 1 and 5")
         if math.isnan(self.effort_h) or not (self.effort_h >= 0):

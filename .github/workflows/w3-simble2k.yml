@@ -1,0 +1,47 @@
+name: Bảo W3 validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "members/simble2k/**"
+      - "shared/**"
+      - "tests/test_w*.py"
+      - "tests/conftest.py"
+      - ".github/workflows/w3-simble2k.yml"
+  push:
+    branches: [main]
+    paths:
+      - "members/simble2k/**"
+      - "shared/**"
+      - "tests/test_w*.py"
+      - "tests/conftest.py"
+      - ".github/workflows/w3-simble2k.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  bao-w3:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install pytest==8.3.3 ruff==0.6.9
+      - name: Official W3 and additional cases (explicit member, no skips)
+        run: python -m pytest -q tests/test_w3.py members/simble2k/w3/tests --member simble2k
+      - name: Bao W1/W2 and shared W2 regression
+        run: |
+          python -m pytest -q tests/test_w1.py --member simble2k -k "not test_w1_4"
+          python -m pytest -q tests/test_w1_extra.py --member simble2k
+          python -m pytest -q tests/test_w2.py members/simble2k/w2 --member simble2k
+          python -m pytest -q tests/shared_w2
+      - name: Bao source style (official files stay unchanged)
+        run: |
+          python -m ruff check members/simble2k --select E,F,I,B,UP,BLE --line-length 120
+          python -m ruff format --check members/simble2k/w3
