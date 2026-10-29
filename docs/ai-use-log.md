@@ -171,3 +171,9 @@ và hashes materials, cập nhật tracking/docs/PR. Các tests do AI tạo đư
 Huy tự báo 7 giờ cá nhân ngày 2026-10-26; thời gian chạy AI không được cộng vào.
 Minh đã approved PR56 tại 7cf44ea; không nhận approval đó là của Huy hoặc Codex.
 E2E không được ghi là đạt khi dependency CLI #54 còn thiếu.
+
+## Week 3 — Phan Quỳnh Quyền (2026-10-29)
+
+Người phụ trách code: **Phan Quỳnh Quyền (pqquyenn)**. Hỗ trợ bởi **Google Antigravity AI**:
+Đọc kế hoạch Week 3 từ plan, kiểm tra contract và materials, triển khai W3-1 dates.py (parse_due), W3-2 log_stats.py (nalyse), W3-3 cli.py (study planner CLI tích hợp W2 và shared components), viết unit/subprocess tests toàn diện tại members/pqquyenn/w3/tests/, giải quyết các cảnh báo Ruff legacy trong W1/W2, soạn tài liệu phản ánh so sánh Python vs C++, cập nhật PROGRESS.md, docs/w3-tracking.md, và thiết lập workflow CI .github/workflows/w3-pqquyenn.yml.
+Validation: 3 official W3 tests, 17 additional W3 tests, 5 W1 tests (variant 3), 15 W2 tests, 51 shared W2 tests, 16 shared CLI E2E tests passed trên Python 3.14.8 local; Ruff check và formatting clean trên toàn bộ package members/pqquyenn.
