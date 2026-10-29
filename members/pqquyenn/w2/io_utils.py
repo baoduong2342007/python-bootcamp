@@ -18,7 +18,7 @@ def load_tasks(path: str | Path) -> list[Task]:
     Empty files or header-only files return an empty list.
     """
     tasks: list[Task] = []
-    with open(path, mode="r", encoding="utf-8", newline="") as f:
+    with open(path, encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         if reader.fieldnames is None:
             return []
