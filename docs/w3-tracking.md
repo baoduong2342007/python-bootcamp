@@ -7,7 +7,7 @@ Chưa có ngày hạn LMS được xác nhận; không đặt due date suy đoá
 | --- | --- | --- | --- |
 | Dương `baoduong2342007` | [#49](https://github.com/baoduong2342007/python-bootcamp/issues/49) | Huy | Chờ owner triển khai/PR; Huy review khi có PR |
 | Trần Quốc Huy `tqhuy0602` | [#50](https://github.com/baoduong2342007/python-bootcamp/issues/50) | Quyền requested; Minh approved 7cf44ea | PR56 có code/tests; bổ sung 2 cases giờ thập phân sau review; 7h do Huy xác nhận ngày 2026-10-26; chờ merge, xem PROGRESS/PR cho CI mới nhất |
-| Quyền `pqquyenn` | [#51](https://github.com/baoduong2342007/python-bootcamp/issues/51) | Minh | Chờ owner |
+| Quyền pqquyenn | [#51](https://github.com/baoduong2342007/python-bootcamp/issues/51) | Minh | Đã hoàn thành code/tests/docs, mở PR py/w3-pqquyenn chờ Minh review |
 | Minh `luongnhatinh` | [#52](https://github.com/baoduong2342007/python-bootcamp/issues/52) | Bảo | Chờ owner |
 | Bảo `simble2k` | [#53](https://github.com/baoduong2342007/python-bootcamp/issues/53) | Dương | Chờ owner |
 
